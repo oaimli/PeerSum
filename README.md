@@ -11,9 +11,11 @@ PeerSum is a multi-document summarization dataset, which is constructed based on
 # What are in this Repository
 
 
-# citation
+# Citation
 If you use this dataset in your projects, please cite our paper:
+
 [Li et al. 2022] Miao Li, Jianzhong Qi, and Jey Han Lau. "PeerSum: A Peer Review Dataset for Abstractive Multi-document Summarization". Arxiv, 2022.
+
 ```
 @inproceedings{peersum_2022,
   title={PeerSum: A Peer Review Dataset for Abstractive Multi-document Summarization},
