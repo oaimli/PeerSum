@@ -1,1 +1,0 @@
-# The code is borrowed from https://github.com/cooelf/SemBERT
