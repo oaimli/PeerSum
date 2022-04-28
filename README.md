@@ -19,7 +19,7 @@ The dataset is stored in the format of json. For each sample, details are based 
 * label: train, val, test (8/1/1)
 
 For each review (i.e., official review, public comment, or author/reviewer response):
-* review_id: unique id for each review
+* review_id: unique id of each review
 * writer: official_reviewer, public, author
 * content: (rating, confidence, comment)
 * replyto: connect to a review (review_id and replyto are for the conversation structure)
