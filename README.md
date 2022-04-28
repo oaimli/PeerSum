@@ -15,7 +15,7 @@ The dataset is stored in the format of json. For each sample, details are based 
 * score: final score of this paper (if there is not a final, it will be an average of review scores)
 * acceptance: acceptance of the paper (e.g., accept, reject or spotlight)
 * meta_review: meta-review of the paper and this is treated as the summary
-* reviews:[review_id, writer, content (rating, confidence, comment), replyto]   review_id and replyto are for the conversation structure
+* reviews: [review_id, writer, content (rating, confidence, comment), replyto]   review_id and replyto are for the conversation structure
 * label: train, val, test (8/1/1)
 
 For each review (i.e., official review, public comment, or author/reviewer response):
