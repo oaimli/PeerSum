@@ -27,7 +27,16 @@ For each review (i.e., official review, public comment, or author/reviewer respo
 ```
 
 # What are in this Repository
-
+```
+/
+├── analysis/               --> (Code for dataset analysis and comparison)
+├── crawling_data/          --> (Code for crawling data from the websites)
+├── dataset/                --> (A foler containing the dataset)
+├── other/                  --> (Other information like the data example)
+├── plot/                   --> (Plot the results)
+├── preparing_data/         --> (Code for data pre-processing)   
+└── README.md               --> (The readme file)
+```
 
 # Citation
 If you use this dataset in your projects, please cite our paper:
