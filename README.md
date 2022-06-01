@@ -1,6 +1,6 @@
 # PeerSum: A Peer Review Dataset for Abstractive Multi-document Summarization
 [![arXiv](https://img.shields.io/badge/arXiv-2203.01769-brightgreen)](https://arxiv.org/abs/2203.01769)
-[![dataset](https://img.shields.io/badge/dataset-%20v2.0-orange)](https://drive.google.com/drive/folders/1M1QhIwjuZOG3QdxNFqY7J5Ik5UsDA0Sk?usp=sharing)
+[![dataset](https://img.shields.io/badge/dataset-%20PeerSum-orange)](https://drive.google.com/drive/folders/1M1QhIwjuZOG3QdxNFqY7J5Ik5UsDA0Sk?usp=sharing)
 
 
 This repo provides the code & data of our paper: [PeerSum: A Peer Review Dataset for Abstractive Multi-document Summarization](https://arxiv.org/abs/2203.01769).
