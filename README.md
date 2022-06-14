@@ -15,7 +15,7 @@ PeerSum is a multi-document summarization dataset, which is constructed based on
 ## Dataset details
 Usually, in a multi-document summarization dataset, there are summaries and source documents. In PeerSum, we have reviews (with scores), comments and responses as the source documents and the meta-review (with an acceptance outcome) as the ground truth summary. Each sample of this dataset contains a summary, corresponding source documents and also other completementary informtion (e.g., review scores) for one paper. Up to now, the second version of PeerSum (peersum_v2) has 16,308 samples, while there are 10,862 samples in the first version.
 
-The dataset is stored in the format of json. For each sample, details are based on following keys with expanation:
+The raw dataset is stored in the format of json. There are some other information for scientific peer reviews (e.g., review score for each peer review and acceptance for each paper) which could be used not only for summarization but also providing other insights for peer reviewing process. For each sample, details are based on following keys with explanation:
 ```
 * paper_id: unique id for each sample
 * title: the title of the corresponding paper
@@ -32,6 +32,8 @@ For each review (i.e., official review, public comment, or author/reviewer respo
 * content: (rating, confidence, comment)
 * replyto: connect to a review (review_id and replyto are for the conversation structure)
 ```
+If you are interested in summarization (generating the meta-review automatically), we reorganized this dataset and there are three different multi-document summarization datasets (PeerSum-R, PeerSum-RC, and PeerSum-ALL) as introduced in our paper. You could also download them via the same link.
+
 
 ## What are in this Repository
 ```
