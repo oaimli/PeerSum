@@ -1,8 +1,10 @@
-# PeerSum: A Peer Review Multi-document Summarization Dataset
+# Towards Summarizing Multiple Documents with Hierarchical Relationships
 [![dataset](https://img.shields.io/badge/dataset-%20PeerSum-orange)](https://drive.google.com/drive/folders/1SGYvxY1vOZF2MpDn3B-apdWHCIfpN2uB?usp=sharing)
 
 ### Overview
-PeerSum is a multi-document summarization dataset, which is constructed based on peer reviews in [the Openreview system](https://openreview.net/). This dataset differs from other MDS datasets (e.g., Multi-News, WCEP, WikiSum, and Multi-XScience) in that our summaries (i.e., the metareviews) are highly abstractive and they are real summaries of the source documents (i.e., the reviews) and it also features disagreements among source documents. Please feel free to use our dataset with a citation. You can download them from [Google Drive](https://drive.google.com/drive/folders/1M1QhIwjuZOG3QdxNFqY7J5Ik5UsDA0Sk?usp=sharing) or [Baidu Netdisk](https://pan.baidu.com/s/1fleJ4MXcTQ2PYmlbJ8tDBA?pwd=s3wi).
+To enhance the capabilities of MDS systems we present PeerSum, a novel dataset for generating meta-reviews of scientific papers, where the meta-reviews are highly abstractive and genuine summaries of reviews and corresponding discussions. These source documents have rich inter-document relationships of an explicit hierarchical structure with cross-references and often feature conflicts. As there is a scarcity of research that incorporates hierarchical relationships into MDS systems through attention manipulation on pre-trained language models, we additionally present Rammer (Relationship-aware Multi-task Meta-review Generator), a meta-review generation model that uses sparse attention based on the hierarchical relationships and a multi-task objective that predicts several metadata features in addition to the standard text generation objective. Our experimental results show that PeerSum is a challenging dataset, and Rammer outperforms other strong baseline MDS models under various evaluation metrics. 
+
+PeerSum is constructed based on peer reviews in [the Openreview system](https://openreview.net/). More details please refer to our paper. Please feel free to use our dataset with a citation. You can download them from [Google Drive]([https://drive.google.com/drive/folders/1M1QhIwjuZOG3QdxNFqY7J5Ik5UsDA0Sk?usp=sharing](https://drive.google.com/drive/folders/1SGYvxY1vOZF2MpDn3B-apdWHCIfpN2uB?usp=sharing)).
 
 ## Updates
 * crawled more data for ICLR 2022 and NeuIPS 2021, February 20, 2022. 
