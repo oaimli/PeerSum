@@ -12,7 +12,7 @@ PeerSum is constructed based on peer reviews in [OpenReview](https://openreview.
 * uploaded the first version of PeerSum, November 12, 2021.
 
 ## Dataset details
-Usually, in a multi-document summarization dataset, there are summaries and source documents. In PeerSum, we have different threads of comments started by official reviewers, public readers, or authors themselves as the source documents and the meta-review (with an acceptance outcome) as the ground truth summary. Each sample of this dataset contains a summary, corresponding source documents and also other completementary informtion (e.g., review scores and confidences) for one academic paper. Up to now, the dataset has 14,993 samples.
+Usually, in a multi-document summarization dataset, there are summaries and source documents. In PeerSum, we have different threads of comments started by official reviewers, public readers, or authors themselves as the source documents and the meta-review (with an acceptance outcome) as the ground truth summary. Each sample of this dataset contains a summary, corresponding source documents and also other completementary informtion (e.g., review scores and confidences) for one academic paper. Up to now, the dataset has 14,993 samples (train/validation/test: 11,995/1,499/1,499).
 
 The dataset is stored in the format of json. There are some other information for scientific peer reviews (e.g., review score for each peer and acceptance for each paper) which could be used not only for summarization but also providing other insights for peer reviewing process. The file named 'peersum_all.json' which contains all data samples in your downloaded folder. For each sample, details are based on following keys with explanation:
 ```
@@ -44,9 +44,10 @@ with jsonlines.open("peersum_all.json") as reader:
 If you are only interested in summarization (generating the meta-review automatically in our paper). You could load it directly with the Dataset library by Huggingface as follows (some attributes are removed):
 ```python
 from datasets import load_dataset
-peersum_train = load_dataset("oaimli/PeerSum", split="train")
-peersum_validation = load_dataset("oaimli/PeerSum", split="validation")
-peersum_test = load_dataset("oaimli/PeerSum", split="test")
+peersum_all = load_dataset('oaimli/PeerSum', split='all')
+peersum_train = dataset_all.filter(lambda s: s['label'] == 'train')
+peersum_val = dataset_all.filter(lambda s: s['label'] == 'val')
+peersum_test = dataset_all.filter(lambda s: s['label'] == 'test')
 ```
 
 
