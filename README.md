@@ -62,3 +62,17 @@ The code will be updated soon.
 ├── preparing_data/         --> (Code for data pre-processing)   
 └── README.md               --> (The readme file)
 ```
+
+If you are going to use our dataset in your work, please cite our paper:
+[Li et al. 2023] Miao Li, Eduard Hovy, and Jey Han Lau. "Towards Summarizing Multiple Documents with Hierarchical Relationships". Arxiv, 2023.
+```
+@inproceedings{peersum_2023,
+  title={Towards Summarizing Multiple Documents with Hierarchical Relationships},
+  author={Miao Li, Eduard Hovy, and Jey Han Lau},
+  booktitle={Arxiv},
+  year={2023}
+}
+```
+
+
+
