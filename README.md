@@ -31,7 +31,7 @@ The dataset is stored in the format of json. There are some other information fo
 ```
 
 
-## How to use our data
+## How to use the data
 To use our original data, you'd better download 'peersum_all.json' from the shared folder and then load dataset with jsonlines.
 ```python
 import jsonlines
