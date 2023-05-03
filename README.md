@@ -64,6 +64,7 @@ The code will be updated soon.
 ```
 
 If you are going to use our dataset in your work, please cite our paper:
+
 [Li et al. 2023] Miao Li, Eduard Hovy, and Jey Han Lau. "Towards Summarizing Multiple Documents with Hierarchical Relationships". Arxiv, 2023.
 ```
 @inproceedings{peersum_2023,
