@@ -21,7 +21,7 @@ The dataset is stored in the format of json. There are some other information fo
 * paper_abstract, str
 * paper_acceptance, str
 * meta_review, str
-* reviews, [{review_id, writer, comment, rating, confidence, reply_to}] (all reviews and comments)
+* reviews, [{review_id, writer, comment, rating, confidence, reply_to}] (all reviews and discussions)
 * label, str, (train, val, test)
 
 * Please note:
