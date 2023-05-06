@@ -41,7 +41,7 @@ with jsonlines.open("peersum_all.json") as reader:
         peersum.append(line)
 ```
 
-If you are only interested in summarization (generating the meta-review automatically in our paper). You could load it directly with the Dataset library by Huggingface as follows (some attributes are removed):
+If you are only interested in summarization (generating the meta-review automatically in our paper). You could load it directly with the [Dataset](https://huggingface.co/datasets/oaimli/PeerSum) library by Huggingface as follows (some attributes are removed):
 ```python
 from datasets import load_dataset
 peersum_all = load_dataset('oaimli/PeerSum', split='all')
