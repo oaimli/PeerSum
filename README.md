@@ -1,4 +1,4 @@
-# Towards Summarizing Multiple Documents with Hierarchical Relationships
+# Summarizing Multiple Documents with Conversational Structure for Meta-review Generation
 [![dataset](https://img.shields.io/badge/dataset-%20PeerSum-orange)](https://drive.google.com/drive/folders/1SGYvxY1vOZF2MpDn3B-apdWHCIfpN2uB?usp=sharing) [![arXiv](https://img.shields.io/badge/arxiv-2305.01498-lightgrey)](https://arxiv.org/abs/2305.01498)
 
 ### Overview
