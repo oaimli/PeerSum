@@ -7,9 +7,10 @@ To enhance the capabilities of MDS systems we present PeerSum, a novel dataset f
 PeerSum is constructed based on peer reviews in [OpenReview](https://openreview.net/). More details please refer to our paper. Please feel free to use our dataset with a citation. You can download them from [Google Drive](https://drive.google.com/drive/folders/1SGYvxY1vOZF2MpDn3B-apdWHCIfpN2uB?usp=sharing).
 
 ## Updates
-* more data added for NeurIPS 2022, April 20, 2023. 
-* crawled more data for ICLR 2022 and NeurIPS 2021, February 20, 2022. 
-* uploaded the first version of PeerSum, November 12, 2021.
+* The paper is accepted at Findings of EMNLP 2023, October 8, 2023.
+* More data added for NeurIPS 2022, April 20, 2023. 
+* Crawled more data for ICLR 2022 and NeurIPS 2021, February 20, 2022. 
+* Uploaded the first version of PeerSum, November 12, 2021.
 
 ## Dataset details
 Usually, in a multi-document summarization dataset, there are summaries and source documents. In PeerSum, we have different threads of comments started by official reviewers, public readers, or authors themselves as the source documents and the meta-review (with an acceptance outcome) as the ground truth summary. Each sample of this dataset contains a summary, corresponding source documents and also other completementary informtion (e.g., review scores and confidences) for one academic paper. Up to now, the dataset has 14,993 samples (train/validation/test: 11,995/1,499/1,499).
