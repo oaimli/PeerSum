@@ -75,9 +75,9 @@ If you are only interested in summarization (generating the meta-review automati
 ```python
 from datasets import load_dataset
 peersum_all = load_dataset('oaimli/PeerSum', split='all')
-peersum_train = dataset_all.filter(lambda s: s['label'] == 'train')
-peersum_val = dataset_all.filter(lambda s: s['label'] == 'val')
-peersum_test = dataset_all.filter(lambda s: s['label'] == 'test')
+peersum_train = peersum_all.filter(lambda s: s['label'] == 'train')
+peersum_val = peersum_all.filter(lambda s: s['label'] == 'val')
+peersum_test = peersum_all.filter(lambda s: s['label'] == 'test')
 ```
 
 
