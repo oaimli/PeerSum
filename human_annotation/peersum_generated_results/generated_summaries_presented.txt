@@ -1,0 +1,1747 @@
+
+******Sample 0*******
+
+https://openreview.net/forum?id=r1la7krKPS
+
+******Ground-truth meta-review*******
+
+The authors propose two measures of calibration that don't simply rely on the top prediction. The reviewers gave a lot of useful feedback. Unfortunately, the authors didn't respond.
+
+******Generated meta-review by PRIMERA*******
+
+This paper proposes two simple extensions to Expected Calibration Error (ECE) for evaluating the quality of calibration (the accuracy of estimating p(y|x) in classification) in deep learning. The authors suggested that the existing ECE, which is the current most popular scalar-valued metric for calibration, has several drawbacks, especially in the multi-class scenario. They also illustrated the drawback of ECE under label noise. 
+
+The paper is interesting and relatively well written. Although the contribution is rather simple (can be describe in less than a page), I can see myself using the SCE/ACE metrics in the near future. In order to strengthen the submission, I still feel that the authors should try to describe why the newly introduced metrics can help in applied scenarios.
+
+ROUGE-1: 0.17834, ROUGE-2: 0.05161, ROUGE-L: 0.16561
+
+
+******Generated meta-review by LED*******
+
+This paper proposes two new metrics for evaluating the quality of calibration in machine learning classifiers. While the reviewers agree that the problem is important and the paper is well-motivated, there is a consensus among the reviewers that the experimental results are not sufficient to support the claims made in the paper.
+
+ROUGE-1: 0.26506, ROUGE-2: 0.07407, ROUGE-L: 0.26506
+
+
+******Generated meta-review by PegasusX*******
+
+The paper proposes two new metrics for calibration, the Static Calibration Error (SCE) and Adaptive Calibration Error. The paper is well written and the problem is important. However, the paper is not ready for publication at ICLR. The main concerns are: 1) The experimental setting is not rigorous enough to show the effectiveness of the proposed metrics due to the following reasons: 1) the first proposed extension (SCE), which is too incremental, is not supported by a more rigorous experimental setting. 2) The proposed metrics are not well motivated and the proposed methods are not simple enough to be implemented. 3) The writing of the paper needs to be improved.
+
+ROUGE-1: 0.14286, ROUGE-2: 0.01449, ROUGE-L: 0.14286
+
+
+******Generated meta-review by RAMMER*******
+
+All reviewers rated this paper borderline accept but one weak reject. The rebuttal addressed some of the concerns, but the majority reject it. The authors are encouraged to take reviews more seriously.
+
+ROUGE-1: 0.22581, ROUGE-2: 0.03333, ROUGE-L: 0.22581
+
+
+******Sample 1*******
+
+https://openreview.net/forum?id=_qc3iqcq-ps
+
+******Ground-truth meta-review*******
+
+Understanding neural networks once they have been trained is a big open problem for machine learning. This manuscript designed graph theoretic and information theoretic measures aimed at helping us understand community structure and function in trained networks. In particular, they measure community structure (modularity) and entropy for trained networks and related these to the performance of the networks. The manuscript runs experiments with fully connected networks on problems such as MNIST and CIFAR. Both community structure and entropy measures are shown to correlate (Spearman and Pearson correlation coefficients) with performance metrics in the networks studied. 
+Reviewers tended to agree that the paper was well written and motivated by an interesting and timely question (understanding trained networks). However, on the whole, most of the reviewers believe that the manuscript is too preliminary for publication at ICLR and I agree. A central issue cited by most of the reviewers is that the experiments are performed on small/toy models for small tasks and under particular hyperparameter regimes. It is therefore unclear to what extent the results would generalize to other situations. E.g. would the results hold for larger dataset or for convolutional neural networks? Connected to this complaint, reviewers worry that there is not enough connection to the literature and baseline methods that could be used to predict performance given measures of trained network activity. Even allowing that the observed correlations are true and generalizable, are these measures better than those covered elsewhere in the literature? Additionally problematic, the measures are not theoretically justified either. Thus, we are missing both reasoned arguments for the metrics and robust quantification beyond a limitted experimental setting. One reviewer, Xmnm, is compelled by the work and recommends acceptance. However, they do not present a compelling case for acceptance, and even repeat several of the concerns raised by other reviewers. 
+In sum, the work is on an interesting subject and timely, but needs further work to be ready for publication.
+
+******Generated meta-review by PRIMERA*******
+
+This paper proposes two methods to analyze the behavior of neurons in neural nets. The main idea is to study the neuron activation patterns of classification models and explore if the performance can be explained through neurons' activation behavior. The authors propose two approaches: one that models neurons’ activation behavior as a graph and examines whether the neurons form meaningful communities, and the other that examines the predictability of neurons' behavior using entropy.
+
+The paper is interesting, easy to read, and very well-structured. Furthermore, the subject of the paper is very relevant: the exploration of tools to increase the understanding and explainability of neural models. However, several major concerns are obvious: (1) The contribution of this paper is not properly compared against existing methods, making it difficult to tell their significance. (2) The scalability of this work is suspicious. There ‘s no guarantee that proposed activation analysis methods will also show the same correlation tendency in other neural networks with more complicated architectures than multi-layer perceptron networks. (3) Experiments on other various hyperparameters/conditions that can affect neuron configurations or learning ability of the neural network(e.g., pruning) could add more validities to their ‘comprehensive experimental study’. (4) The suggested explanatory methodologies and approaches were pretty persuasive to explain the network behavior in microscopic context. Nevertheless, the scalability and practicality of the work should be examined carefully.
+
+ROUGE-1: 0.37184, ROUGE-2: 0.04348, ROUGE-L: 0.34657
+
+
+******Generated meta-review by LED*******
+
+This paper proposes two new metrics to analyze the behavior of neurons in neural nets. The main idea is to study the neuron activationpatterns of classification models and explore if the performance can be explained through neurons' activation behavior. The authors propose two approaches: one that models neurons’ activation behavior as a graph and examines whether the neurons form meaningful communities, and the other that examines the predictability of neurons' behavior using entropy. 
+
+The reviewers agree that this is an interesting paper and the authors have done a good job in their rebuttal. However, the paper is not ready for publication at ICLR due to the following reasons:
+
+1. There are many existing approaches in explaining deep learning models, such as turning deep models into decision trees in "Distilling a Neural Network Into a Soft Decision Tree". Then complexity measurement of the decision tree can be a baseline. It would be interesting to see how the techniques presented in this paper compare to other techniques already present in the literature. 
+
+ROUGE-1: 0.36032, ROUGE-2: 0.07317, ROUGE-L: 0.34008
+
+
+******Generated meta-review by PegasusX*******
+
+The paper proposes two methods to analyze the behavior of neurons in neural nets. The main idea is to study the neuron activation patterns of classification models and explore if the performance can be explained through neurons' activation behavior. The authors propose two approaches: one that models neurons' Activation behavior as a graph and examines whether the neurons form meaningful communities, and the other that examines the predictability of neurons' behavior using entropy. The paper is interesting, easy to read, and well-structured. However, the paper is below the acceptance threshold. The reviewers raised several concerns, including the lack of a thorough literature survey, the lack and limited experimental validation, and concerns about the scalability of the proposed methods. The AC agrees with the reviewers and recommends rejection.
+
+ROUGE-1: 0.32743, ROUGE-2: 0.03111, ROUGE-L: 0.29646
+
+
+******Generated meta-review by RAMMER*******
+
+Reviewers pointed out that there was no rebuttal to address the concerns of the reviewers, and the paper is not ready for publication in the ICLR.
+
+ROUGE-1: 0.12000, ROUGE-2: 0.05172, ROUGE-L: 0.10857
+
+
+******Sample 2*******
+
+https://openreview.net/forum?id=HygXkJHtvB
+
+******Ground-truth meta-review*******
+
+There has been significant discussion in the literature on the effect of the properties of the curvature of minima on generalization in deep learning.  This paper aims to shed some light on that discussion through the lens of theoretical analysis and the use of a Bayesian Jeffrey's prior.  It seems clear that the reviewers appreciated the work and found the analysis insightful.  However, a major issue cited by the reviewers is a lack of compelling empirical evidence that the claims of the paper are true.  The authors run experiments on very small networks and reviewers felt that the results of these experiments were unlikely to extrapolate to large scale modern models and problems.  One reviewer was concerned about the quality of the exposition in terms of the writing and language and care in terminology.  Unfortunately, this paper falls below the bar for acceptance, but it seems likely that stronger empirical results and a careful treatment of the writing would make this a much stronger paper for future submission.
+
+******Generated meta-review by PRIMERA*******
+
+This paper studies the question of whether the widest minimum in the loss landscape is not the best in terms of generalization. The authors provide theoretical arguments and claim that there exists an optimal width beyond which generalization can be poor. Synthetic simulations are presented to support these claims. The main contribution the authors claimed is an optimal degree of curvature exist which gives the best generalization guarantees, which is in contrast to the commonly perceived "the wider the better". The motivation and the theoretical arguments are interesting, but the paper lacks in presentation and sufficient empirical evidence is also lacking to get fully convinced by the claims. 
+
+The authors should discuss the architecture design choices used for the synthetic data-generating model. Why are the last 3 layers of the larger model comprise of linear mappings? What does n=23 signify in the caption? More discussion is needed to describe "intersection of the likelihood values", "Difference in update Step" and "density is placed around 0" in section 5. 
+
+ROUGE-1: 0.35503, ROUGE-2: 0.07143, ROUGE-L: 0.32544
+
+
+******Generated meta-review by LED*******
+
+This paper proposes a new method for explaining the generalization performance of neural networks, based on information geometry and minimum description length. While the reviewers agree that the paper is interesting, there is a consensus among the reviewers that the experimental results are not sufficient to support the claims made in the paper.
+
+ROUGE-1: 0.27027, ROUGE-2: 0.08182, ROUGE-L: 0.23423
+
+
+******Generated meta-review by PegasusX*******
+
+The paper proposes a new determinant of the optimal width of the parameter landscape, which is used to show that the widest minimum in the loss landscape is not the best in terms of generalization. The paper is well written and the theoretical arguments are interesting. However, the paper lacks in presentation and sufficient empirical evidence is also lacking to get fully convinced by the claims. The authors are encouraged to address the concerns raised by the reviewers in the final version of the paper.
+
+ROUGE-1: 0.38583, ROUGE-2: 0.11111, ROUGE-L: 0.34646
+
+
+******Generated meta-review by RAMMER*******
+
+This paper presents a simple theorem to ensure that the true signal in the distribution of neurons in a Bayesian model is sampled uniformly from the initial values. The paper builds on the previous work of Reisch et al. on the Fisher information metric by making this approximation on the parameter and its variants in deep neural networks. Reviewers were impressed at the practicality of this method and the ability to learn the correct parameters. The main criticism was the difficulty in understanding the generalization of the derivations in the derivation and making the link between certain steps in the connection to the deriv, and the general assumption of the connection. In the discussion the authors have addressed some of these concerns in the rebuttal.  In the end, the reviewers all recommend acceptance.
+
+
+ROUGE-1: 0.45033, ROUGE-2: 0.09333, ROUGE-L: 0.37748
+
+
+******Sample 3*******
+
+https://openreview.net/forum?id=H1gyy1BtDS
+
+******Ground-truth meta-review*******
+
+The authors study generalization in distributed representation learning by describing limits in accuracy and complexity which stem from information theory. 
+
+The paper has been controversial, but ultimately the reviewers who provided higher scores presented weaker and fewer arguments. By recruiting an additional reviewer it became clearer that, overall the paper needs a little more work to reach ICLR standards. The main suggestions for improvements have to do with improving clarity in a way that makes the motivation convincing and the practicality more obvious. Boosting the experimental results is a complemental way of increasing convincingness, as argued by reviewers.
+
+
+******Generated meta-review by PRIMERA*******
+
+This paper studies the distributed representation learning problem, where multiple sources of data are processed to provide information about some statistically correlated ground truth Y. They studied this problem from information-theoretic point of view. Their main contribution can be summarized as follows:
+
+The optimal trade-off between the accuracy and complexity were studied for discrete memoryless data model as well as memoryless vector Gaussian model. A variational bound were constructed in order to connect the optimal encoder and decoder mappings with the solution of an optimization algorithm. Moreover, some experiment were conducted to support the approach.
+
+Overall, I think the paper is well-organized. The definition of the problem and the motivation of the approach are clear. The theorems, algorithms and experiments are solid enough tosupport the whole story of this paper. I encourage the authors to study the gap between the variational lower bound and the optimal region, and maybe do more experiments to find a good use case of the proposed method.
+
+ROUGE-1: 0.29658, ROUGE-2: 0.06897, ROUGE-L: 0.25856
+
+
+******Generated meta-review by LED*******
+
+This paper studies the problem of distributed representation learning, where multiple sources of data are processed separately to provide information about some statistically correlated ground truth Y. The authors studied this problem from information-theoretic point of view. They studied the optimal trade-off between the accuracy and complexity using discrete memoryless data model as well as memoryless vector Gaussian model. A variational bound was constructed in order to connect the optimal encoder and decoder mappings with the solution of an optimization algorithm. 
+
+The reviewers raised several concerns about the writing of the paper, which were not addressed in the rebuttal. 
+
+ROUGE-1: 0.33166, ROUGE-2: 0.09137, ROUGE-L: 0.30151
+
+
+******Generated meta-review by PegasusX*******
+
+The paper studies the distributed representation learning problem, where multiple sources of data are processed to provide information about Y. The authors derive a fundamental trade-off between the accuracy and complexity for any representation-estimation (or encoding-decoding) method, and a variational bound on the optimal trade-offs. The paper also presents a variation of the optimal accuracy-complexity region, which also expresses the optimal encoder and decoder map as the solution of the optimization problem. The experiments are also well-organized and the authors have provided a good rebuttal. However, the paper is not ready for publication at ICLR. The main concerns raised by the reviewers are: 1) The accuracy-Complexity trade- off studied in the paper was more of a rate-distortion type of information-theoretic problem, and the connection to the learning problem is unclear. 2) The proposed method is not well-motivated. 3) The experiments were not well motivated. 4) The writing of the paper could be improved.
+
+ROUGE-1: 0.32184, ROUGE-2: 0.07722, ROUGE-L: 0.30651
+
+
+******Generated meta-review by RAMMER*******
+
+The reviewers agree that this work addresses an important problem and addresses it well. The authors are welcome to submit more interesting work that extends their method to the problem. 
+
+ROUGE-1: 0.21875, ROUGE-2: 0.03175, ROUGE-L: 0.18750
+
+
+******Sample 4*******
+
+https://openreview.net/forum?id=dTqOcTUOQO
+
+******Ground-truth meta-review*******
+
+The article proposes an approach to alter the approximate posterior distribution in order to remove some of the information (unlearning). The approach is applicable when the approximate posterior is obtained via (stochastic gradient) MCMC methods. Unlearning is done by shifting the approximate true posterior by some value delta, which is found via optimisation with an influence function.
+
+The approach is novel, tackles an important problem and is mathematically sound. Reviewers have highlighted some of its limitations. In particular, the modified posterior is obtained by translating the original posterior, without changing its shape; many aspects of the data may therefore not be forgotten. The authors have partially addressed this concern in their response and provided additional experiments. Although there is still disagreement amongst reviewers, I recommend acceptance. 
+
+A Minor comment:
+I would not present MCMC merely as a "machine learning algorithm" (p.1), nor as a "sampling based Bayesian inference method" (p.1 and p.2). MCMC is a generic approach to approximate high-dimensional integrals and obtain samples approximately sampled from some target distribution, dating back from the work of Metropolis (1953) and Hastings (1970). Its application to Bayesian inference/machine learning problems came much later, see e.g. the excellent review of C. Robert and R. Casella: A short History of MCMC: Subjective recollections from incomplete data. Statistical Science, 2011.
+
+******Generated meta-review by PRIMERA*******
+
+The paper proposes a method for knowledge removal in a MCMC context. The reviewers agree that the problem of knowledge removal seems like it may see a lot of application, and introducing the first algorithm for MCMC is an important step. The theoretical development of the method looks solid. However, the theoretical guarantees provided in this work are based on several technical assumptions which are hard to verify in real contexts. The question is: Is this proposed method an acceptable solution in a legal context? Your approach provides theoretical guarantees that it will erase this information from the model (with an epsilon error), but this guarantee only applies if a set of assumptions are met. But it is almost impossible to verify that these assumptions are meet in a real context. In consequence, will the legislator be willing to accept this method as a solution to implement “the right to be forgotten”? This is not discussed in the paper.
+
+ROUGE-1: 0.33684, ROUGE-2: 0.03704, ROUGE-L: 0.32105
+
+
+******Generated meta-review by LED*******
+
+This paper proposes a method for knowledge removal in a MCMC context. The reviewers agree that this is an interesting problem and the paper is well-written. 
+
+ROUGE-1: 0.12903, ROUGE-2: 0.00813, ROUGE-L: 0.11290
+
+
+******Generated meta-review by PegasusX*******
+
+The paper presents a method for knowledge removal in Markov chain Monte Carlo (MCMC). The paper introduces the concept of epsilon-knowledge removal to measure how closely the modified posterior corresponds to the exact posterior that would have been obtained based on only the remaining data. The paper also introduces a new empirical metric, the membership inference attack accuracy (MIA Acc.), and the prediction difference between the retrained and unlearned models, in the rebuttal. The authors also addressed the concerns of the reviewers. The AC agrees with the reviewers and recommends acceptance.
+
+ROUGE-1: 0.29393, ROUGE-2: 0.03215, ROUGE-L: 0.28754
+
+
+******Generated meta-review by RAMMER*******
+
+The paper addresses a new problem of model-constrained data samples (MMC) in the context of a learned MMC. The results are promising, and are technically sound.
+
+ROUGE-1: 0.12097, ROUGE-2: 0.00000, ROUGE-L: 0.12097
+
+
+******Sample 5*******
+
+https://openreview.net/forum?id=rkgb9kSKwS
+
+******Ground-truth meta-review*******
+
+This paper proposes a new formulation of the non-local block and interpret it from the graph view. The idea is interesting and the experimental results seems to be promising.
+
+Reviewer has two major concerns. The first is the presentation, which is not clear enough. The second is the experimental design and analysis. The authors add more video dataset in the revision, but still lack comprehensive experimental analysis for video-based applications. 
+
+Overall, the idea of non-local block from graph view is interesting. However, the presentation of the paper needs further polish and thus does not meet the standard of ICLR
+
+
+******Generated meta-review by PRIMERA*******
+
+The paper proposes a spectral non-local block, which is a generalization of existing works in the literature. The reviewers agree that the idea is well-motivated and that the experiments are convincing enough that the authors made enough effort to prove their method might work. However, there are concerns about the reasonability of the experiments. The experiments in the paper show relative performance gain with respect to a baseline method. It seems that there is a lack of comparison with state-of-the-art methods in the  literature. For example, in Table 8, a performance gain is observed when compared with I3D.  However, the recent STOA models can achieve much higher accuracy than the baseline and also the proposed method. The proposed method is generic to all neural nets, it makes more sense to compare with SOTA and make improvements based on SOTA. 
+
+ROUGE-1: 0.39024, ROUGE-2: 0.10656, ROUGE-L: 0.33333
+
+
+******Generated meta-review by LED*******
+
+The paper proposes a spectral nonlocal block, which is a generalized method of the non-local block and non- local stage in the literature. The proposed spectral non local block can be plugged into a neural network to improve its effectiveness. The paper also provides theoretical analyses of the stability of the proposed method, and also extend the method by including more  Chebyshev polynomial terms. The experiments seem convincing enough that the authors made enough effort to prove their method might work. However, the main concern is the scarce relevance of the results, which should be further enhanced by perform large-scale video classification like Kinetics400.
+
+ROUGE-1: 0.42308, ROUGE-2: 0.15534, ROUGE-L: 0.39423
+
+
+******Generated meta-review by PegasusX*******
+
+The paper proposes a spectral nonlocal block, which is a generalized method of the non-local block and non- local stage in the literature. The proposed spectral non-Local block can be plugged into a neural network to improve its effectiveness. The paper also provides theoretical analyses of the stability of the proposed method, and also extend the method by including more Chebyshev polynomial terms. Experiments are conducted on image classification and action recognition tasks, and they valid the effectiveness of the proposal method. The idea is well-motivated, and it is a generalization of existing works in theliterature. However, I am afraid that the idea is not well explained and supported, thus I gave a weak reject to encourage the authors to further improve the paper.
+
+ROUGE-1: 0.42795, ROUGE-2: 0.15859, ROUGE-L: 0.38428
+
+
+******Generated meta-review by RAMMER*******
+
+All reviewers unanimously support acceptance.
+I do too.  A strong accept to be considered in the spotlight of this paper.  The results were clearly presented with the help of multiple experiments, the writing was clear.  There was clearly significant interest in the results, and the authors did a good job of making the contributions. 
+
+ROUGE-1: 0.29487, ROUGE-2: 0.06494, ROUGE-L: 0.26923
+
+
+******Sample 6*******
+
+https://openreview.net/forum?id=SJxRKT4Fwr
+
+******Ground-truth meta-review*******
+
+The paper proposes a solution based on self-attention RNN to addressing the missing value in spatiotemporal data. 
+
+I myself read through the paper, followed by a discussion with the reviewers. We agree that the model is reasonable, and the results are promising. However, there is still some room for improvement:
+1. The self-attention mechanism is not new. The specific way proposed in the paper is an interesting tweak of existing models, but not brand new per se. Most importantly, it is unclear if the proposed way is the optimal one and where the performance improvement comes from. As the reviewer suggested, more thorough empirical analysis should be performed for deeper insights of the model. 
+
+2. The datasets were adopted from existing work, but most of them do not have such complex models as the one proposed in the paper. Therefore, the suggestion for bigger datasets is valid. 
+
+Given the considerations above, we agree that while the paper has a lot of good materials, the current version is not ready yet. Addressing the issues above could lead to a good publication in the future. 
+
+******Generated meta-review by PRIMERA*******
+
+This paper proposes a Transformer-based model with cross-dimensional self-attention for multivariate time series imputation and forecasting. The authors consider time series with observations collected at different locations (L), for different measurements (M), and at different timestamps (T). The authors describe 4 different self-Attention mechanisms based on how the three dimensions, and it turns out the proposed Decomposed approach achieves the best performance and has moderate model complexity among the four. Experiments on several traffic and air quality datasets show the superiority of the proposed model.
+
+The reviewers agree that the problem and the proposed method are well motivated. The proposed method outperforms several recent RNN-based models. However, there is always a trade-off between having access to the entire history and the ability to be used in streaming settings. Also, the authors should report the actual run-time of the algorithms on the real data (beyond Table 1 and compared to the baselines). The main criticism of the experiments is that the datasets are very small. For example, NYC-Traffic has only 186 time series which is considered to be of the toy-scale.
+
+ROUGE-1: 0.40642, ROUGE-2: 0.08065, ROUGE-L: 0.37968
+
+
+******Generated meta-review by LED*******
+
+This paper proposes a Transformer-based model with cross-dimensional self-attention for multivariate time series imputation and forecasting. The reviewers agree that the proposed problem is a practical problem and the main contribution of this paper is valuable. However, the primary contribution as a purely empirical study the bar would be high on the standard of the experiments, the reported experiments are on rather small datasets. 
+
+ROUGE-1: 0.29365, ROUGE-2: 0.08000, ROUGE-L: 0.28571
+
+
+******Generated meta-review by PegasusX*******
+
+The paper proposes a Transformer-based model with cross-dimensional self-attention for multivariate time series imputation and forecasting. The paper considers time series with observations collected at different locations (L), for different measurements (M), and at different timestamps (T). The authors describe 4 different self- attention mechanisms based on how the three dimensions, and it turns out the proposed Decomposed approach achieves the best performance and has moderate model complexity among the four. Experiments on several traffic and air quality datasets show the superiority of the proposed model. The reviewers raised several concerns about the paper, including the lack of novelty, the lack and size of the experiments, and the lack or lack of comparison with baselines. The authors provided a response to these concerns, but the paper still does not meet the acceptance bar.
+
+ROUGE-1: 0.34891, ROUGE-2: 0.08777, ROUGE-L: 0.33645
+
+
+******Generated meta-review by RAMMER*******
+
+The paper introduces a new approach to MST datasets, focusing on using spatiotemporal models for data imagerization. The papers builds a new neural dynamical model with respect to existing data and performance gains on state-of-the-art benchmarks.
+The reviewers appreciated the contribution in terms of the theoretical guarantees for the proposed method, as well as the potential benefits for the applied context and future work with this data, as noted in the reviews. The proposed solution, called MST for MST, is an extension to RNNs that also can be applied to low-dimensional data and thus is novel.
+
+
+ROUGE-1: 0.36491, ROUGE-2: 0.06360, ROUGE-L: 0.34386
+
+
+******Sample 7*******
+
+https://openreview.net/forum?id=IR-V6-aP-mv
+
+******Ground-truth meta-review*******
+
+This paper studies the method to achieve the batch size-invariant for policy gradient algorithms (PPO, PPG). The paper achieves this by decoupling the proximal policy from the behavior policy. Empirical results show that the methods are somewhat effective at providing batch size invariance.
+
+After reading the authors' feedback, the reviewer discussed the paper and they did not reach a consensus. On the one hand, the rebuttal made some reviewers change their minds who appreciated the explanations provided by the authors and the new Figure that better highlights the batch size invariance property.
+On the other hand, some reviewers think that there is still significant work to be done to get this paper ready for publication. In particular, it is necessary to improve the theoretical analysis and the evaluation of the empirical results.
+
+I encourage the authors to follow the reviewers' suggestions while they will update their paper for a new submission.
+
+******Generated meta-review by PRIMERA*******
+
+This paper proposes a new method to deal with batch size-invariance for policy optimization algorithms such as PPO and PPG. The key insight is to decouple the proximal policy (used for controlling policy updates) from the behavior policy ( used for off-policy corrections). Our experiments help explain why these algorithms work, and additionally show how they can make more efficient use of stale data. 
+
+The reviewers agree that this paper studies an interesting problem of batch size invariance. The writing is clear, and the method is easy to understand. The experimental results are sufficient to demonstrate the effectiveness of the proposed method.
+
+However, the reviewers also agree that the paper could be improved in terms of clarity of presentation and the design of the experiments. In particular, it is important to provide a more rigorous analysis of our ablations, showing that the effects of all of the ablations are statistically significant at the 0.1% level. We also include a plot of this metric broken down by environment (Figure 3), which better conveys our results than the existing plot of mean normalized return. It might be good to note that ProcGen scores are quite close for different algorithms, and so the effect of the batch-inv invariant property might not be as apparent for these domains.
+
+
+ROUGE-1: 0.48780, ROUGE-2: 0.17439, ROUGE-L: 0.46612
+
+
+******Generated meta-review by LED*******
+
+This paper proposes a method to achieve batch size-invariance for policy optimization. The reviewers agree that this is an interesting problem and the paper is well-written. However, the reviewers also agree that the paper lacks theoretical justification, and the claim of the batch size invariant property is vague and weak. The authors are encouraged to improve the paper and resubmit to a future venue.
+
+ROUGE-1: 0.41284, ROUGE-2: 0.21296, ROUGE-L: 0.40367
+
+
+******Generated meta-review by PegasusX*******
+
+The paper proposes a method to achieve batch size invariance for policy optimization algorithms such as PPO and PPG. The paper achieves this by decoupling the proximal policy from the behavior policy. The experiments demonstrate the effectiveness of the method. The reviewers were unanimous in their opinion that the paper is not ready for publication at ICLR. The main concerns were around the clarity of the presentation and the experimental design. The authors have addressed some of the concerns in their rebuttal, but the paper still needs significant work before it can be accepted.
+
+ROUGE-1: 0.52846, ROUGE-2: 0.23770, ROUGE-L: 0.50407
+
+
+******Generated meta-review by RAMMER*******
+
+All reviewers thought that the paper is a good addition to the field of stochastic optimization. 
+In particular, they liked the theoretical results that were quite convincing.   The final score was a 4, but there were some concerns that the authors addressed to improve the paper in the rebuttal. However, most reviewers are still concerned about the correctness of the paper to the ICLR (and related literature), as noted by the reviewers.  The AC agrees that it seems to be an interesting paper, but the approach is somewhat simple and requires a bit of a conceptualization and discussion of what the problem is, the generalizability of the approach, or indeed the practical significance.  It would be better if the paper were more convincing about how it would generalize to the hyperparameter setting (i.e., why a neural network and its architecture should have a high threshold to be optimal).  It will benefit from more rigor in terms of how the proposed algorithm is interpreted.  This is a difficult problem to address, especially considering that it is now used to measure the degree of batch size-invariance, and instead referring to the degree the number of batch-invaries is measured by our new metric.  Finally the lack of any specific theoretical justification of this approach is very limiting for whether it can be useful in its present form.  While this was a concern, the authors' response did a good job of revising and addressing the concerns.  Overall I think this is a useful paper that will be of interest to the community.
+
+
+ROUGE-1: 0.40194, ROUGE-2: 0.08273, ROUGE-L: 0.35835
+
+
+******Sample 8*******
+
+https://openreview.net/forum?id=rJx7wlSYvB
+
+******Ground-truth meta-review*******
+
+The main contribution is a Bayesian neural net algorithm which saves computation at test time using a vector quantization approximation. The reviewers are on the fence about the paper. I find the exposition somewhat hard to follow. In terms of evaluation, they demonstrate similar performance to various BNN architectures which require Monte Carlo sampling. But there have been lots of BNN algorithms that don't require sampling (e.g. PBP, Bayesian dark knowledge, MacKay's delta approximation), so it seems important to compare to these. I think there may be promising ideas here, but the paper needs a bit more work before it is to be published at a venue such as ICLR.
+
+
+******Generated meta-review by PRIMERA*******
+
+This paper proposes a differentiable Bayesian neural network (DBNN) to speed up inference in an online setting. The idea is to combine online vector quantization with Bayesian Neural networks (BNN), so that only incremental computation is needed for a new data point. It seems the idea of online codevector histogram, or online vector histograms, is not new, which is not surprising since the original code vector histogram work is from decades ago (1982). A quick search shows several related work in this domain, e.g., ‘An Online Incremental Learning Vector Quantization’. It would be better if the authors could clarify the differences if they want to claim the contribution. One of the major concerns is the fairness in terms of comparison to BNN approaches. For example, in Table 2, BNN (shown as MU) is significantly slower than DU/DBNN and DNN. The authors mentioned that this is because MU predicts results for 10 batches of size 3, and therefore 30 times slower. Since DU and DBNN also uses MC-dropout, why is this not an issue for DU andDBNN. Such large overhead is also inconsistent with the description in Section 5.3, saying that the “overhead of sampling weights is negligible”.
+
+ROUGE-1: 0.29936, ROUGE-2: 0.04487, ROUGE-L: 0.26752
+
+
+******Generated meta-review by LED*******
+
+This paper proposes a differentiable Bayesian neural network (DBNN) to speed up inference in an online setting. The idea is to use an online code vector histogram (OCH) method attached to the input and output of a classical DNN. The proposed approach is compared on some tasks, including real and synthetic datasets. 
+
+The reviewers agree that the paper needs more work to improve the writing and the fairness of the comparison to BNN approaches. 
+
+ROUGE-1: 0.35294, ROUGE-2: 0.06486, ROUGE-L: 0.33155
+
+
+******Generated meta-review by PegasusX*******
+
+The paper proposes a differentiable Bayesian neural network (DBNN) to speed up inference in an online setting. The idea is to combine online vector quantization with Bayesian neural networks (BNN), so that only incremental computation is needed for a new data point. The paper is unclear, and the authors have not addressed the concerns raised by the reviewers.
+
+ROUGE-1: 0.32749, ROUGE-2: 0.07101, ROUGE-L: 0.28070
+
+
+******Generated meta-review by RAMMER*******
+
+The paper proposes a method for the approximation of Bayesian neural network (BNN) to the estimated uncertainty of the stream distribution of data, for streaming data by using MC-dropout in the Bayesian approach. The paper also establishes that an OVA can be generated from a BNN for streaming inputs using a few Gaussian likelihood processes. The reviewers find the paper well-written, the approach useful and the theoretical analysis to be good.
+
+ROUGE-1: 0.30108, ROUGE-2: 0.07609, ROUGE-L: 0.25806
+
+
+******Sample 9*******
+
+https://openreview.net/forum?id=r1glygHtDB
+
+******Ground-truth meta-review*******
+
+The paper proposes an architecture for semantic instance segmentation learnable from coarse annotations and evaluates it on two microscopy image datasets, demonstrating its advantage over baseline. While the reviewers appreciate the details of the architecture, they note the lack of evaluation on any of popular datasets and the lack of comparisons with baselines that would be more close to state-of-the-art. The authors do not address this criticism convincingly. It is not clear, why e.g. the Cityscapes or VOC Pascal datasets, which both have reasonably accurate annotations, cannot be used for the validation of the idea. If the focus is on the precision of the result near the boundaries, then one can always report the error near boundaries (this is a standard thing to do). Note that the performance of the baseline models is far from saturated near boundaries (i.e. the errors are larger than mistakes of annotation).
+
+At this stage, the paper lacks convincing evaluation and comparison with prior art. Given that this is first and foremost application paper, lacking some very novel ideas (as pointed out by e.g. Rev1), better evaluation is needed for acceptance.
+
+******Generated meta-review by PRIMERA*******
+
+This paper proposes a method for semantic segmentation using "lazy" segmentation labels. Lazy labels are defined as coarse labels of the segmented objects. The proposed method is a UNET trained in a multitask fashion whit 3 tasks: object detection, object separation, and object segmentation. The method is trained on 2 datasets: air bubbles, and ice crystals.
+
+The proposed method performs better than the same method using only the weakly supervised labels and the one that only uses the sparse labels. The novelty of the method is very limited. It is a multit-task UNET. The approach is compared with one method using pseudo labels. However, this method is not SOTA.
+
+
+ROUGE-1: 0.29801, ROUGE-2: 0.05333, ROUGE-L: 0.29139
+
+
+******Generated meta-review by LED*******
+
+This paper proposes a method for multi-task learning on sets of labeled data that are largely weakly supervised (in this case, partially segmented instances), augmented by comparatively fewer fully supervised annotations. The proposed approach optimizes jointly over the various types of labels by treating each one as a task. This allows more flexibility and efficiency for training deep neural networks that are data hungry in a practical setting where manual annotation is expensive, by collecting more lazy (rough) annotations than precisely segmented images. The multiple tasks are designed to make use of both the weak as well as full (‘strong’) labels, such that performance on fully annotated machine-generated output is improved. The method is demonstrated on two segmentation datasets, including food microscopy images and histology images of tissues respectively.
+
+The paper is well written and provides sufficient clarity and a good overview of the approach. However, it is not clear how to adapt the classifiers such that they are efficient for datasets with a limited number of images and each image containing hundreds of objects. The (minor) novelty mainly comes from the distinct types of weak/strong annotation data fed here: instance scribbles, boundary scribbles and (some or few) full segmentations. This is an important problem that arises while learning in data-scarce settings. While I think the ideas per se have relatively minor novelty, the combination seems novel to me, and that might warrant publication.
+
+ROUGE-1: 0.40000, ROUGE-2: 0.04673, ROUGE-L: 0.35814
+
+
+******Generated meta-review by PegasusX*******
+
+The paper proposes a method for semantic segmentation using "lazy" segmentation labels. The proposed method is a UNET trained in a multitask fashion with 3 tasks: object detection, object separation, and object segmentation. The method is demonstrated on two segmentation datasets, including food microscopy images and histology images of tissues respectively. The paper is well written and the proposed method has some novelty. However, the method is not SOTA and the experiments are not convincing enough. The authors have not provided a rebuttal to address the concerns raised by the reviewers.
+
+ROUGE-1: 0.31802, ROUGE-2: 0.07829, ROUGE-L: 0.28975
+
+
+******Generated meta-review by RAMMER*******
+
+This paper proposes a new label-to- label (SE) layer to reduce some degrees of data to be aligned and to label labels and label labels separately. This is an interesting problem and the paper is well-written, but the reviewers and I agree that the experimental evaluation of this work is not strong enough to make a strong case for acceptance for this approach. The reviewer does not think the work is novel or interesting enough and does not argue for it. This makes me more skeptical and less confident in this work's performance than the baseline in terms of learning.
+
+
+ROUGE-1: 0.31864, ROUGE-2: 0.06143, ROUGE-L: 0.28475
+
+
+******Sample 10*******
+
+https://openreview.net/forum?id=nkaba3ND7B5
+
+******Ground-truth meta-review*******
+
+This paper formalizes the setting where an autonomous RL agent operates with zero or very few resets, and provides a novel benchmark for this setting with diverse environments ranging from simple manipulation to complex manipulation/locomotion. The paper then uses this benchmark to analyze current methods and provide insight into those crucial factors that affect performance in this setting. The insights into current methods especially are appreciated. As one reviewer stated, "This paper isolates one problematic assumption in the way of [progress in RL], the environment reset problem, and provides the groundwork for [such] progress, i.e. baselines, clear metrics, etc. I believe the community is much better off with this paper published, since prior works don't seem to have used compatible methodologies."
+
+******Generated meta-review by PRIMERA*******
+
+This paper describes a new framework called Autonomous Reinforcement Learning (ARL) to facilitate studies on continual real-world embodied learning, such as that performed by humans and animals. Most reinforcement learning (RL) studies use episodic benchmark tasks. The paper argues that conducting studies on non-episodic tasks is crucial. After defining ARL, the authors introduce simulated benchmarks. The strength of this paper is that they clearly argue that the studies of continual learning are important and give a clear notion about ARL. The weakness of this work is the lack of theoretical novelty and new proposalExcept for the argument around ARL and its benchmark tasks, I totally agree with the authors' argument about the importance of continual reinforcement learning. However, it is not clear whether the proposed methodology really deals with issues of environment resets in the fullness of time. Will following this methodology result in much fewer resets and superior learning if tasked to achieve the same level of performance as expensive and impractical full episodic reset methodology, at least for tasks of interest withreal-world robots? While algorithms developed for ARL may indeed require fewer interventions in a fixed amount of experiment time, this does not mean that convergence to an optimal policy will not take considerably more experimentation time. If total experimentation time is also a factor, then the trade-off of autonomous operation in the real- world vs. cost of human resets seems to be still an open problem in need of task specific trade-offs. Perhaps there is no choice but to resort to ARL but it is imho not clear that ARL doesn’t introduce learning issues of its own, since learning from biased data streams is known to be particularly challenging and empirically leads to suboptimal learning, as per the continual learning literature. This view is not necessarily invalidated by experimental evidence presented in the paper, at at least as far as I can tell. More discussion and standardization may be needed in order to reduce variance of ARL experiments when reporting results.
+
+ROUGE-1: 0.27155, ROUGE-2: 0.03030, ROUGE-L: 0.22845
+
+
+******Generated meta-review by LED*******
+
+This paper proposes a framework for continual reinforcement learning (ARL) where the agent not only learns through its own experience, but also contends with lack of human supervision to reset between trials. This incentivises the search for algorithms which score better trade-offs between expensive environment resets and average return of learned policies, using the two definitions given in the paper. After defining ARL, the authors introduce simulated benchmarks. 
+
+The reviewers agree that this is a good paper. However, the reviewers also agree that the paper is not ready for publication at ICLR due to the following reasons:
+
+- The theoretical contribution around ARL is not new. It is not clear whether the proposed methodology really deals with issues of environments resets in the fullness of time. The paper provides a hypothesis/analysis for why current algorithms are insufficient in Section 6.3, which can potentially be used to develop better algorithms.
+- Some more constructive proposal is expected. The experimental framework is composed of existing benchmarks so it is difficult to see a contributions there.
+
+ROUGE-1: 0.31544, ROUGE-2: 0.04054, ROUGE-L: 0.26846
+
+
+******Generated meta-review by PegasusX*******
+
+The paper presents a framework for autonomous reinforcement learning, where the agent not only learns through its own experience, but also contends with lack of human supervision to reset between trials. The paper also unifies previous works into two evaluation scenarios: (a) Deployed Policy Evaluation, and (b) Continuing Policy Evaluation. The authors provide a benchmark for this framework, and provide insights on the important factors for effective ARL. The main concerns of the paper are: - The paper is not suitable for ICLR. - The theoretical contribution is not new. - It is not clear whether the proposed methodology really deals with issues of environment resets in the fullness of time. - More discussion and standardization may be needed in order to reduce variance of ARL experiments when reporting results.
+
+ROUGE-1: 0.33600, ROUGE-2: 0.06452, ROUGE-L: 0.31200
+
+
+******Generated meta-review by RAMMER*******
+
+The paper presents an idea that combines autoencoders with autonomous RL to address the problem of time-distribution in the ML context. The idea is sound. The experimental evaluation is comprehensive and convincing. The paper is well motivated.
+
+ROUGE-1: 0.23457, ROUGE-2: 0.03750, ROUGE-L: 0.20988
+
+
+******Sample 11*******
+
+https://openreview.net/forum?id=Bkx29TVFPr
+
+******Ground-truth meta-review*******
+
+The paper proposes an implicit function approach to learning the modes of multimodal regression. The basic idea is interesting, and is clearly related to density estimation, which the paper does not discuss. 
+
+Based on the reviews and the fact that the authors did not submit a helpful rebuttal, I recommend rejection.
+
+******Generated meta-review by PRIMERA*******
+
+The paper proposes a parametric modal regression algorithm for multi-modal distributions. In such settings, learning the conditional mode is more desirable than the conditional mean, the latter being the focus of standard regression approaches. The key idea is to learn a (parametric and implicit) function f(x,y) whose minima(s) 'y' corresponds to the conditional modes. However, the paper does not explain clearly how the above idea is put to practice as an algorithm in Section 3. It will be great if Section 3 can be re-written with more detailed explanations in paragraphs following the "Implicit Function Theorem" definition and more examples. The experiments mainly are performed artificial datasets to assess the algorithm when the underlying multi-model distributions are known. Empirical results are also discussed on a couple of real-world datasets where the proposed algorithm obtains the best results.
+
+ROUGE-1: 0.31795, ROUGE-2: 0.09326, ROUGE-L: 0.25641
+
+
+******Generated meta-review by LED*******
+
+The paper proposes to learn a function f(x,y) that takes both an input x and a proposed output y and produces a value of 0 when the output y is correct for the input (i.e a conditional mode of p(y|x)), and hopefully a nonzero output when y is incorrect. To achieve this, the authors take inspiration from the implicit function theorem and additionally seek an f with ∂f/∂y=-1 at the modes for each x. Empirical results are also discussed on a couple of real-world datasets where the proposed algorithm obtains the best results.
+
+The reviewers agree that this is a very interesting and novel approach to regression. However, the reviewers also agree that the experiments are insufficient with little state-of-the-art comparisons, few datasets and clear problems in the learning. There are also no real competing methods in any experiments, except for very simple regression methods or baselines from the 90's (MDN).
+
+ROUGE-1: 0.28972, ROUGE-2: 0.10377, ROUGE-L: 0.25234
+
+
+******Generated meta-review by PegasusX*******
+
+The paper proposes a parametric modal regression algorithm for multi-modal distributions. The key idea is to learn a (parametric and implicit) function f(x,y) whose minima(s) 'y' corresponds to the conditional modes. The paper does not explain clearly how the above idea is put to practice as an algorithm in Section 3. The experiments mainly are performed artificial datasets to assess the algorithm when the underlying multi-model distributions are known. Empirical results are also discussed on a couple of real-world datasets where the proposed algorithm obtains the best results. The reviewers raised a number of concerns, including the lack of a clear definition of the problem, the lack and lack of experiments with state-of-the-art methods, and the lack in comparison to existing methods. The authors did not provide a response to these concerns.
+
+ROUGE-1: 0.35417, ROUGE-2: 0.13684, ROUGE-L: 0.29167
+
+
+******Generated meta-review by RAMMER*******
+
+This paper studies multi-modal regression (MME) methods for predicting a user input in a real-world dataset. This is a very simple setting, although it does have some strong technical contribution. There is also a clear distinction between the objective function of Bayesian methods and the Bayesian method in the MSE literature. While the authors took a risk and went beyond the standards of prior work (see previous work for an example of how to evaluate the implicit parametric method) it was not enough to convince the reviewers.  The idea is quite new and interesting, but heuristic and intuitive choices in terms of MSE (and its comparison with the baselines) makes this work hard to read.
+
+The reviewers have reached consensus that this is an interesting area and well executed with a strong rebuttal, but with any number of concerns, the paper was not ready for publication in its current form.
+
+ROUGE-1: 0.29557, ROUGE-2: 0.04975, ROUGE-L: 0.24631
+
+
+******Sample 12*******
+
+https://openreview.net/forum?id=LNmNWds-q-J
+
+******Ground-truth meta-review*******
+
+This paper aims to use pre-training to bridge the gap in performance between 2D GNN and 3D GNN. Specifically, during pretraining, it trains both 2D GNNs and 3D GNNs on data equipped with 3D geometry to maximize the mutual information between the 2D GNN representation with the 3D GNN representation. The proposed approach is interesting and novel and the paper presents some promising results showing that the pre-training does provide some benefits for downstream tasks where 3D geometry information is not available in comparison to several other baseline pretraining methods. While the reviewers agree that property prediction without only 2D graph is a practically important setting for high throughput screening, there are concerns about whether the current set of results paint a clear picture on the benefits and superiority of the proposed methods to alternatives (e.g., vs conf-gen) even after the revision. This is not due to lacking of results, but more of a presentation issue where results are not organized and discussed clearly to provide a coherent story.  We do see clear and strong potential for this paper but it needs a careful rewrite/re-organization to tease out the key messages and how the experiments support them.
+
+******Generated meta-review by PRIMERA*******
+
+This paper proposes a 3D pretraining method for molecular property prediction. As 3D information is infeasible to compute at the scale required by real-world applications, this paper reasons about the geometry of molecules given only their 2D molecular graphs. The authors use a 2D GNN to encode these molecules. Then, it maximizes the mutual information between 3D summary vectors and the representations of a Graph Neural Network (GNN) such that they contain latent3D information. During fine-tuning, the model can take 2D molecules as input. The pretraining phase ensures that the representations during fine- tuning contain latent 3Dinformation. The paper pre-trains on three datasets, QM9, GEOM-Drugs, and QMugs, and tests on both quantum mechanical properties (QM9 and GEOM -Drugs) and non-quantum properties (10 datasets, e.g. HIV and BACE). The paper claims that significant improvements are obtained forquantum mechanical properties. Also, the method does not suffer from the negative transfer.
+
+The major strength of this work is the extensive empirical evidence supporting the claims that the proposed self-supervised learning scheme (mutual information between 2d GNN and 3D Gnn learned embeddings) significantly improves performance on downstream tasks as compared to other pre-training strategies. In addition, the language is simple and clear, and the figures provide easily understandable graphical depictions of the method. The major weakness, which is addressed by the authors, is that these 2D models, even when pre-trained with 3D Information, still significantly underperform methods that can leverage 3d information in the downstream task. This implies that in settings where accuracy is key, one should still opt for the computational expense of generating the 3D conformers directly. While the authors argue that the gold standard methods of generating 3d conformers can be prohibitively expensive, I would like to see what the performance of 3DGNN operating on conformers such as those that might be generated by a fast method like GeoMol.
+
+ROUGE-1: 0.43462, ROUGE-2: 0.11197, ROUGE-L: 0.38462
+
+
+******Generated meta-review by LED*******
+
+This paper proposes a 3D pretraining method for molecular property prediction. As 3D information is infeasible to compute at the scale required by real-world applications, this paper reasons about the geometry of molecules given only their 2D molecular graphs. During fine-tuning, the model can take 2D molecules as input. The authors show that 3D pre-training provides significant improvements for a wide range of properties, such as a 22% average MAE reduction on eight quantum mechanical properties. Moreover, the learned representations can be effectively transferred between datasets in different molecular spaces. The paper is clearly written and easy to follow. The experiments are well designed. The major weakness, which is addressed by the authors, is that these 2D models, even when pre-trained with 3D Information, still significantly underperform methods that can leverage 3d information in the downstream task. This implies that in settings where accuracy is key, one should still opt for the computational expense of generating the 3D conformers directly. 
+
+ROUGE-1: 0.42507, ROUGE-2: 0.07123, ROUGE-L: 0.35967
+
+
+******Generated meta-review by PegasusX*******
+
+The paper presents a method for pretraining a graph neural network (GNN) representation of 2D molecules. The method is novel and sound, and the experiments are well designed. The paper is well written and easy to follow. The main concern raised by the reviewers is that the empirical results are not convincing. The authors have addressed this concern in their rebuttal. The AC agrees with the reviewers and recommends acceptance.
+
+ROUGE-1: 0.32967, ROUGE-2: 0.08118, ROUGE-L: 0.28571
+
+
+******Generated meta-review by RAMMER*******
+
+All reviewers agree that this work makes an important contribution to the understanding of deep-textured pre-training with molecules. Reviewers also agree on the technical merits of the method. The authors should take advantage of the discussion with the reviewers to improve the manuscript.
+
+ROUGE-1: 0.19355, ROUGE-2: 0.05691, ROUGE-L: 0.18548
+
+
+******Sample 13*******
+
+https://openreview.net/forum?id=EAy7C1cgE1L
+
+******Ground-truth meta-review*******
+
+the paper proposed a novel idea of  requiring users to complete a proof-of-work before they can read the model's prediction to prevent model extraction attacks. Reviewers were excited about the paper and ideas. Some misunderstanding raised by reviewers were sufficiently clarified by the authors in the rebuttal.
+
+******Generated meta-review by PRIMERA*******
+
+This paper proposes a new defense to the model stealing problem that an attacker queries a supervised machine learning model service to have data labeled to use as training data and copy the functionality of the model. The proposed method is proactive defense that slows down the attacker in obtaining the labeled data, based on the information leakage estimator. The evaluation shows that existing attacks using out-of-distribution data can be slow down more than a regular user querying in-dist distribution data.
+
+The paper discusses ML model extraction attacks while using APIs for accessing them on the public networks. Although some methods exist for preventing or making the attacks hard, all of them have substantial impacts on legitimate users’ experience while using the system, including the slower models or lower accuracy in results. This paper proposed a method for dissuading the attacker by increasing the cost of the attack. Solving a puzzle for all users before getting the final response (POW) would be the solution noting that the difficulty will be increased if the system identifies any adverse behaviors. This method requires no modification of the victim model and can be applied by machine learning practitioners to guard their publicly exposed models against being easily stolen. The paper discussed the issue, and the background works well. The purpose is clear, and there are a satisfying amount of experiments for validating the proposed solution.
+
+
+ROUGE-1: 0.20351, ROUGE-2: 0.04947, ROUGE-L: 0.18246
+
+
+******Generated meta-review by LED*******
+
+This paper proposes a defense against model extraction attacks by forcing users to do a proof-of-work (PoW) puzzle before they receive the labels from the victim model. This deters attackers by greatly increasing (even up to 100x) the computational effort needed to leverage query access for model extraction. To minimize the impact on legitimate users, the defense tunes the per-query difficulty based on the extent of information leakage. The authors evaluate their method against different types ofmodel extraction attacks. The evaluation shows that existing attacks using out- of-distribution data can be slow down more than a regular user querying in-dist distribution data. 
+
+The reviewers agree that the paper is well-written and well-executed. The proposed method requires no modification of the victimmodel and can be applied by machine learning practitioners to guard their publicly exposed models against being easily stolen. 
+
+ROUGE-1: 0.31633, ROUGE-2: 0.11340, ROUGE-L: 0.28571
+
+
+******Generated meta-review by PegasusX*******
+
+The paper proposes a new defense to model stealing by requiring all users to solve a proof-of-work before they can read the model's predictions. The proposed method is proactive defense that slows down the attacker in obtaining the labeled data, based on the information leakage estimator. The evaluation shows that existing attacks using out-of distribution data can be slow down more than a regular user querying in-distribution data. The paper is clear, well organized and pleasant to read. The experimental section is extensive, and the experimental protocol seems appropriate. The novelty of the paper seems to reside in the application of existing concepts, like PATE for privacy cost estimation and HashCash as challenge, as components of a theft defense method. The authors addressed the concerns of the reviewers in their rebuttal. The AC agrees with the reviewers and recommends acceptance.
+
+ROUGE-1: 0.34872, ROUGE-2: 0.18653, ROUGE-L: 0.31795
+
+
+******Generated meta-review by RAMMER*******
+
+Reviewers and the AC found the paper to be well structured, well written and solid, with a clear theory, and the proposed defense procedure to have solid empirical evaluation. Overall, the paper was clearly written, with convincing analysis.  It is not clear, however, how this defense works.  The proposed defense needs to be shown to be stronger than the attacks.
+
+ROUGE-1: 0.27273, ROUGE-2: 0.03704, ROUGE-L: 0.27273
+
+
+******Sample 14*******
+
+https://openreview.net/forum?id=H1gmHaEKwB
+
+******Ground-truth meta-review*******
+
+The rebuttal period influenced R1 to raise their rating of the paper.
+The most negative reviewer did not respond to the author response.
+This work proposes an interesting approach that will be of interest to the community.
+The AC recommends acceptance.
+
+******Generated meta-review by PRIMERA*******
+
+This paper proposes a data-independent way for pruning neutrons in deep neural networks with a provable trade-off between its compression rate and the approximation error. The output of a layer of neurons is approximated by a corset of neurons in its preceding layer. The pruning of neurons based on the coresets is shown to be effective when compared with other methods. The authors have validated it on two convolutional network architectures.
+
+The paper is well-written and easy to understand, and the appendix is short enough that I actually read it. However, I have at least two major comments: (1) The theorems are nice, but with the exception of Thm 6 (which I like), they are simple applications of existing results. My main issue is that you have not provided an end-to-end bound. There are two things lacking: ( 1a) Lack of dealing with several layers, e.g., composing your approximation error, With an additive error instead of a relative error, does composition cause a major problem? Seems like this could be an easy theorem. (1b), Lack of a clear final statement bounding the overall error. This is somewhat trivial (if you have a single pruned layer), but it makes the assumptions more clear. In particular, you assume the input x has norm bounded by beta. The higher the norm, the larger the coreset (less compression). Best practices recommend normalizing the input of the network and use batch normalization, which normalizes inputs to hidden layers. This has been done for most of the benchmark networks. Thus, we do not expect any dramatic change of results in the experiments on other data sets.
+
+ROUGE-1: 0.13924, ROUGE-2: 0.01911, ROUGE-L: 0.11392
+
+
+******Generated meta-review by LED*******
+
+This paper proposes a model compressing method based on coreset framework. The goal of the paper is to reduce the number of neurons. The output of a layer of neurons is approximated by a corset of neurons in its preceding layer. The pruning of neurons based on the coresets is shown to be effective when compared with other methods. The theoretical analysis seems strong. The authors have validated it on two convolutional network architectures.
+
+The paper is well-written and easy to understand. The reviewers agree that the proposed method is a clever idea, it's a useful topic, the authors have a very good understanding of the topic, and the theoretical analysis is strong. 
+
+ROUGE-1: 0.23077, ROUGE-2: 0.03896, ROUGE-L: 0.20513
+
+
+******Generated meta-review by PegasusX*******
+
+The paper proposes a neural pruning method based on coreset framework. The main idea is to sampling the neurons on each layer with probability equal to the neuron's max share among all the outputs to the next layer, and updating the weights associated with the remained neurons. The paper is well written and the theoretical analysis is strong. The experiments are promising. However, the main contribution is the theoretical results. The authors have addressed the concerns of the reviewers in the rebuttal. The AC agrees with the authors and recommends acceptance.
+
+ROUGE-1: 0.27068, ROUGE-2: 0.12214, ROUGE-L: 0.25564
+
+
+******Generated meta-review by RAMMER*******
+
+This paper focuses on the problem of prune weights, especially for the reinforcement learning problems where a large number of samples are involved, the results are generally good. After the rebuttal, all reviewers and AC are satisfied with the author's work.
+
+ROUGE-1: 0.33735, ROUGE-2: 0.04938, ROUGE-L: 0.31325
+
+
+******Sample 15*******
+
+https://openreview.net/forum?id=bUAdXW8wN6
+
+******Ground-truth meta-review*******
+
+The paper describes an adversarial training approach that, in addition to the commonly used robustness loss, requires the network to extract similar representation distributions for clean and attacked data. The proposed method is inspired by domain adaptation approaches that require a model to extract domain invariant/agnostic features from two domains. Although the experimental results are solid and technically sound, the novelty of the methodology is not enough, as the domain classifier and the gradient reversal layer are the same with those methods in domain adaptation such as "unsupervised domain adaptation by backpropagation". On the other hand, more recent SOTA methods are missing and only smaller scale datasets are used for evaluation. During the discussions, the major concerns from three reviewers are novelty. 
+
+I totally agree that the simplicity of the method should be a virtue. However, the idea of domain-invariant representation learning is already established well, and its application to adversarial training is quite intuitive to the community. Also, the similar methodology already exists in domain adaptation. According to the top-tier conference culture in the ML community, what most valuable is the novelty and insight, not the performance. In the end, I think that this paper may not be ready for publication at ICLR, but the next version must be a strong paper.
+
+******Generated meta-review by PRIMERA*******
+
+This paper proposes a domain invariant adversarial training (DIAL) method, which learns the feature representation that is both robust anddomain invariant. DIAL uses a variant of Domain Adversarial Neural Network (DANN) on the natural domain and its corresponding adversarial domain. In a case where the source domain consists of natural examples and the target domain is the adversarially perturbed examples, our method learns a feature representation constrained not to discriminate between the natural and adversarial examples, and can therefore achieve a more robust representation. Our experiments indicate that our method improves both robustness and standard accuracy, when compared to other state-of-the-art adversarial learning methods.
+
+All reviewers agree that the paper is well-written and easy to follow, and conducts extensive experiments to demonstrate the effectiveness of the proposed method. The experimental results are solid and technically sound. However, the novelty of the methodology is not enough, as the domain classifier and the gradient reversal layer are the same with those methods in domain adaptation such as [1]. 
+
+The authors are encouraged to address the reviewers' comments in the final version.
+
+ROUGE-1: 0.53634, ROUGE-2: 0.24685, ROUGE-L: 0.50627
+
+
+******Generated meta-review by LED*******
+
+This paper proposes a new adversarial training method, Domain Invariant Adversarial Learning (DIAL), which learns a feature representation which is both robust and domain invariant. The reviewers agree that the paper is well-written and easy to follow. The experiments and, in particular, the ablation study section is insightful and aligned with the paper's claims. The experimental results are solid and technically sound. However, the novelty of the methodology is not significant as similar methodology exists in domain adaptation. 
+
+ROUGE-1: 0.41892, ROUGE-2: 0.17007, ROUGE-L: 0.37838
+
+
+******Generated meta-review by PegasusX*******
+
+The paper proposes a domain invariant adversarial learning method, which learns a feature representation which is both robust and domain invariance. The paper is well written and easy to follow. The experiments are extensive and the results are convincing. However, the novelty of the method is not sufficient. The authors have provided a rebuttal and have addressed the concerns of the reviewers. The AC agrees with the authors and recommends rejection.
+
+ROUGE-1: 0.34843, ROUGE-2: 0.09123, ROUGE-L: 0.32753
+
+
+******Generated meta-review by RAMMER*******
+
+The paper considers a feature extractor-to-domain adaptation problem (GAN) in an adversarial setting. The authors show that the technique is robust to both adversarial attacks and clean distributions. The method is simple, intuitive and effective, as well as novel.
+
+The paper shows that the proposed framework is novel, and the experiments look promising. The main concerns from the reviews are the lack of novelty and limited experiments with large networks. As a result, the work is not well positioned for publication. 
+
+ROUGE-1: 0.37458, ROUGE-2: 0.09428, ROUGE-L: 0.34783
+
+
+******Sample 16*******
+
+https://openreview.net/forum?id=B5XahNLmna
+
+******Ground-truth meta-review*******
+
+This paper reveals that popular data poisoning systems, Fawkes and LowKey, fail to effectively protect user privacy in facial recognition. The methods to defend against poisoning attacks are quite simple---you can either adaptively tune the face recognition models or just wait for more advanced facial recognition systems. Given these “disappointed” findings from the technical solution side, this paper further argues that legislation may be the only viable solution to prevent abuses of facial recognition.
+
+Overall, all the reviewers highly appreciate the comprehensive and rigorous evaluations provided in this paper and enjoy reading it. The biggest concern is raised by the Reviewer 6s7m, given this work fails to discuss/compare to previous works on Facial identity anonymizing and the technical contribution is incremental. During the discussion period, all other reviewers reach a consensus that 1) facial identity anonymizing is not relevant; and 2) this work make enough contributions and is worthy to be heard by the general community; the Reviewer 6s7m still hold the opposite opinion, but is okay for accepting this paper anyway. 
+
+In the final version, the authors should include all the clarification provided in the discussion period.
+
+******Generated meta-review by PRIMERA*******
+
+This paper studies the effect of data poisoning in face recognition and the relation to the defense techniques. Two solutions of defense are given: oblivious trainer and adaptive trainer. The claim is that, any existing poisoning methods cannot protect the privacy of users in the face images. The paper shows that perturbing facial images does not offer long term security; future systems can still recognize the once perturbed image(s).
+
+The paper is well written and easy to follow. The topic discussed in this paper is of significant importance as the rapid development of deep learning techniques nowadays also poses great threats to people's privacy, especially for the face data. Extensive experiments have been conducted to statistically ascertain the authors' claims.
+
+However, the technical novelty is very limited. Rather than fancying legislative alternative, a research paper needs to propose technical solution. The original evaluations performed by the Fawkes and LowKey papers were deemed sufficient by reviewers at the time. We believe our paper thus makes an important contribution in demonstrating how such evaluations may have overestimated the protections offered to users. The design of defense strategies that achieve high robustness and accuracy, in Section 3.5. These strategies demonstrate that robustness need not come at a cost in accuracy in all situations, as is often claimed in the adversarial examples literature. 
+
+Overall, this is a facial privacy analysis with insightful claims, but the presentation and the discussion is very confusing. Thus, we are not able to agree this argument whether is reasonable and solid. The final rating will depend on the authors’ feedback.
+
+ROUGE-1: 0.41410, ROUGE-2: 0.07522, ROUGE-L: 0.38326
+
+
+******Generated meta-review by LED*******
+
+This paper studies the effect of data poisoning in face recognition and the relation to the defense techniques. It shows that the methods fail over time and they do not generalize to future attacks. Two solutions of defense are given: oblivious trainer and adaptive trainer. Both methods successfully defeat two poisoning attack baselines, raising awareness on the inefficiency of the poisoning-based identity protection mechanism. 
+
+The paper is well written and easy to follow. The topic discussed in this paper is of significant importance as the rapid development of deep learning techniques nowadays also poses great threats to people's privacy, especially for the face data. It is in interesting paper and has value for the community to consider longer term security measures for facial recognition privacy concerns. The experimental results are within expectation and little technical insight is gained.
+
+ROUGE-1: 0.40606, ROUGE-2: 0.06707, ROUGE-L: 0.35152
+
+
+******Generated meta-review by PegasusX*******
+
+The paper presents a new defense against data poisoning attacks. The paper is well written and the analysis is thorough. The authors also provide a discussion of the defense and the attack dynamics. The main concern is that the technical novelty is limited. The rebuttal did not convince the reviewers. The AC agrees with the reviewers and recommends acceptance.
+
+ROUGE-1: 0.29719, ROUGE-2: 0.06478, ROUGE-L: 0.28112
+
+
+******Generated meta-review by RAMMER*******
+
+The paper presents a method for unsupervised recognition of face images, which can be used for face detection, the proposed method is very elegant, well-motivated, and easy to use. The reviewers were highly positive on this paper. In particular the paper shows that the proposed technique is technically sound and potentially useful. It is simple to implement and easy too, and the problem set is well designed. Also, the main contribution of this paper is clear as well. There was a fair amount of confusion about the paper's significance and motivation, which was addressed during the rebuttal phase. 
+
+ROUGE-1: 0.31724, ROUGE-2: 0.03472, ROUGE-L: 0.24138
+
+
+******Sample 17*******
+
+https://openreview.net/forum?id=kxARp2zoqAk
+
+******Ground-truth meta-review*******
+
+This paper presents a method which selects feasible data augmentations suitable for contrastive time series representation learning. The topic in this paper is timely and interesting. One of 4 reviewers did not complete the review, not responding to a few reminders. So, one emergency reviewer, who is an expert in meta-learning was added. While there is one review that strongly supports this work, two reviews remained unsupportive after the discussion period ended. I appreciate the authors for making efforts in responding to reviewers’ comments. However, after the discussion period, most of reviewers had concerns in this work, pointing out that the technical correctness needs further justification and experiments should be improved.  While the idea is interesting, the paper is not ready for the publication at the current stage. I encourage to resubmit the paper after addressing these concerns.
+
+******Generated meta-review by PRIMERA*******
+
+This paper proposes an information-aware approach to representation learning for time series. The formulation focuses on how to obtain effective data augmentations and addresses the underlying problem from information-theoretic viewpoints, leading to the two optimization criteria, namely, high fidelity and high variety. The experimental results on several time series datasets for forecasting and classification show improvements over the methods in comparison.
+
+All reviewers agree that this is a very good submission that touches upon a kind of neglected and less fancy area of data augmentation for time-series - authors propose a very neat solution that improves upon the state of the art and demonstrates good performance across datasets and various ablation studies.
+
+ROUGE-1: 0.31621, ROUGE-2: 0.03187, ROUGE-L: 0.26877
+
+
+******Generated meta-review by LED*******
+
+This paper proposes a new approach to data augmentation for time series representation learning. The reviewers agree that the paper is well-written and the proposed approach is novel and interesting. However, there are concerns about the novelty of the approach and the significance of the results. The authors are encouraged to revise the paper based on the reviewers' comments and resubmit to a future venue.
+
+ROUGE-1: 0.41951, ROUGE-2: 0.15764, ROUGE-L: 0.40000
+
+
+******Generated meta-review by PegasusX*******
+
+The paper proposes a new data augmentation approach based on information theory, a meta learning approach and an approach to select optimal data augmentation for contrastive learning. The paper is well written and the proposed approach is interesting. However, the experimental results are not convincing. The authors have provided a detailed response to the reviews, but the paper still needs more work before publication.
+
+ROUGE-1: 0.34483, ROUGE-2: 0.09950, ROUGE-L: 0.32512
+
+
+******Generated meta-review by RAMMER*******
+
+This paper considers the problem of selecting optimal data augmentation that is best in high fidelity for the time series of one-hot encoding for time data.
+The proposed approach is well-written, clearly written, and well- motivated, and the empirical results are quite clear. I can therefore recommend to accept the paper. 
+
+
+
+ROUGE-1: 0.28125, ROUGE-2: 0.05263, ROUGE-L: 0.26042
+
+
+******Sample 18*******
+
+https://openreview.net/forum?id=HJe_yR4Fwr
+
+******Ground-truth meta-review*******
+
+This works presents a new and interesting notion of margin for deep neural networks (that incorporates representation at all layers). It then develops generalization bounds based on the introduced margin. The reviewers pointed some concerns, including some notation issues, complexity in case of residual networks, removal of exponential dependence on depth,  and dependence on a hard to compute quantity - \kapp^{adv}. Some of these concerns were addressed by the authors. At the end, most of the reviewers find the notion of all-layer margin introduced in this paper a very novel and promising idea for characterizing generalization in deep networks. Agreeing with reviewers, I recommend accept. However, I request the authors to accommodate remaining comments /concerns raised by R1 in the final version of your paper. In particular, in your response to R1 you mentioned for one case you saw improvement even with dropout, but that is not mentioned in the revision; Please include related details in the draft.
+
+
+******Generated meta-review by PRIMERA*******
+
+The paper presents a bound on the generalization error of a deep network in terms of margin at each layer of the network. The starting premise is that extending the existing margin generalization bounds to deep networks worsen exponentially with the depth. Recent work which removed that exponential dependency is claimed to require a more involved proof and complicated dependence on input. The paper provides a new bound that is simpler and tighter. A second contribution is to extend their bounds to robust classifier. Since their bounds depend on instance-specific margins, the extension to the robust case is straightforward. Finally, they present a new algorithm motivated by their bounds, that maximized margin on all layers. They show that the resultant network has much lower error than standard training.
+
+The paper is well-presented and in spite of being theoretical is very nicely developed so that the main contributions come out clearly to non-specialists too. A few minor comments: The inner min in Equation 2.2 seems to be a typo. In Theorem 2.1, there is typo around the definition of \xi. Below thoerem 2. 1, the phrase "depend on the q-th moment" has 'q' undefined. Typo "is has a" in Theorem 3.1 is the the most insightful result, though simple to prove in hindsight. It would greatly help the readers if simple figures are used to explain this insightful result in the final manuscript.
+
+ROUGE-1: 0.36181, ROUGE-2: 0.07576, ROUGE-L: 0.35176
+
+
+******Generated meta-review by LED*******
+
+This paper presents a new way to measure the margin in the context of deep networks that removes the exponential dependency of depth in the corresponding generalization bounds. The reviewers agree that this is a valuable contribution both for theory and practices.
+
+ROUGE-1: 0.32836, ROUGE-2: 0.10050, ROUGE-L: 0.28856
+
+
+******Generated meta-review by PegasusX*******
+
+The paper presents a new generalization bound for deep neural networks and develops a regularizer which optimize quantities related to the bound and improve generalization error on competitive baselines. The paper is well-written and the main contributions come out clearly to non-specialists. However, the paper still requires rewriting to properly emphasize that it does not avoid exponential dependence on depth, but rather avoids an explicit dependence. The authors also need to discuss the computability of kappadv.
+
+ROUGE-1: 0.37975, ROUGE-2: 0.08511, ROUGE-L: 0.32911
+
+
+******Generated meta-review by RAMMER*******
+
+The paper received mixed reviews (6,6,8,7,8) and there was no consensus among the reviewers. One reviewer did not vote for the paper after the rebuttal period.
+
+ROUGE-1: 0.13757, ROUGE-2: 0.01070, ROUGE-L: 0.12698
+
+
+******Sample 19*******
+
+https://openreview.net/forum?id=SyevYxHtDB
+
+******Ground-truth meta-review*******
+
+The paper proposed an optimization-based defense against model stealing attacks.  A criticism of the paper is that the method is computationally expensive, and was not demonstrated on more complex problems like ImageNet.  While this criticism is valid, other reviewers seem less concerned by this because the SOTA in this area is currently focused on smaller problems.  After considering the rebuttal, there is enough reviewer support for this paper to be accepted.
+
+******Generated meta-review by PRIMERA*******
+
+This paper proposes an effective defense against model stealing attacks by perturbing the posterior prediction of a protected DNN with a balanced goal of maintaining accuracy and maximizing misleading gradient deviation. The maximizing angular deviation formulation makes sense and seemingly correct. The heuristic solver toward this objective is shown to be relatively effective in the experiments. While the theoretical novelty of the method is limited, the application in adversarial settings may be useful to advance of this research field, especially when it is relatively easy to apply by practitioners.
+
+ROUGE-1: 0.34783, ROUGE-2: 0.13836, ROUGE-L: 0.33540
+
+
+******Generated meta-review by LED*******
+
+This paper proposes an effective defense against model stealing attacks. All reviewers agree that the paper is well-written and easy to follow. The proposed method is straightforward and well motivated. The experiments are extensive, and the authors have addressed most of the concerns raised by the reviewers.
+
+ROUGE-1: 0.43333, ROUGE-2: 0.20339, ROUGE-L: 0.41667
+
+
+******Generated meta-review by PegasusX*******
+
+The paper proposes a defense against model stealing attacks by perturbing the posterior prediction of a protected DNN with a balanced goal of maintaining accuracy and maximizing misleading gradient deviation. The maximizing angular deviation formulation makes sense and seemingly correct. The heuristic solver toward this objective is shown to be relatively effective in the experiments. While the theoretical novelty of the method is limited, the application in adversarial settings may be useful to advance of this research field, especially when it is relatively easy to apply by practitioners.
+
+ROUGE-1: 0.32500, ROUGE-2: 0.12658, ROUGE-L: 0.30000
+
+
+******Generated meta-review by RAMMER*******
+
+This paper proposes a new method for defense against a known malicious attacker that is easy to understand.
+
+The reviewers find this method interesting and interesting. The reviewers unanimously agree that this paper is worth publishing.
+
+ROUGE-1: 0.38889, ROUGE-2: 0.07547, ROUGE-L: 0.37037
+
+
+******Sample 20*******
+
+https://openreview.net/forum?id=xUdEO_yE-GV
+
+******Ground-truth meta-review*******
+
+The paper proposes a method for segmentation of thin structures in 2D and 3D, based on persistent homology and using a new filtration. The method performs similarly to state-of-the-art methods on 2D datasets and outperforms some baselines in 3D.
+
+After considering the authors' response and discussing, the reviewers have not arrived at a consensus. 
+
+Pros include:
+- Simple and reasonable approach
+- Fairly strong experimental results
+
+Some cons are:
+- Missing theoretical contributions
+- Experimental results on 2D datasets are not that strong, while on 3D datasets important baselines are missing
+- At times unclear/unconventional presentation 
+
+Overall, at this point I recommend rejection. The paper is promising, but since the main claim is good performance on 3D data, it is important to have a thorough empirical evaluation there, with the relevant baselines (as mentioned by the reviewers). I very much encourage the authors to polish the paper and submit to a different venue.
+
+******Generated meta-review by PRIMERA*******
+
+This paper proposes a new topological loss for training neural networks on images representing curvilinear structures. In addition to the usual MSE or cross-entropy losses, they suggest to add a regularization term based on persistent homology, in order to preserve the topological properties in the images predicted by the network. However, the common filtrations proposed in the literature (pixel values, distance maps) for doing so have their own flaws and are not always suited for such images, so the authors propose a new filtration that combines those common filtrations with fil trations based on heights, i.e., with the persistent homologies transform. Using this new filTration, they then provide a few experiments on which their loss compares favorably to other topological and non-topological losses (used on the same fixed neural net architecture) and obtain very competitive results.
+
+The reviewers agree that the topic of this paper is highly fascinating, and the paper is overall well written, but the approach seems a bit incremental for now. There is no real theoretical back-up and the results, while being OKish, do not empirically justify by themselves the approach (to my opinion).
+
+ROUGE-1: 0.40233, ROUGE-2: 0.08798, ROUGE-L: 0.33236
+
+
+******Generated meta-review by LED*******
+
+This paper proposes a new filtration for topological data analysis, based on the computational topology framework. The reviewers agree that the paper is well-written and the proposed method is interesting. However, there is a consensus among the reviewers that the current version of the paper does not meet the bar for publication at ICLR due to the following reasons: (1) the novelty of the work is limited, and (2) the experimental results are not strong enough to justify the approach.
+
+ROUGE-1: 0.41202, ROUGE-2: 0.12121, ROUGE-L: 0.32618
+
+
+******Generated meta-review by PegasusX*******
+
+The paper proposes a new filtration function for training neural networks on images representing curvilinear structures. The proposed method is based on persistent homology and uses it to preserve the topological properties in the images predicted by the network. The paper is well written and the proposed method seems simple and effective. However, the paper is not ready for publication at ICLR. The main concerns raised by the reviewers are: 1) The paper does not provide a lot of additional insights into the theory, but also does not have an in-depth comparison for the 3D case (in which it might showcase increased expressivity). 2) The paper contains some inaccuracies related to TDA (see the Minor Comments section for details). 3) The experimental setup is preliminary and missing important details: means and standard deviations are only provided for the proposed approach, whereas the numbers for other methods are presumably cited from an additional publication. 4) The writing could be improved.
+
+ROUGE-1: 0.39744, ROUGE-2: 0.10968, ROUGE-L: 0.35897
+
+
+******Generated meta-review by RAMMER*******
+
+This paper presents a novel topology approach to identify the topological topology of neural images and train them in a model to represent their properties. Reviewers agree that the paper is interesting and well written. The authors also addressed some concerns that they had. The reviewers found that the contributions of the paper were incremental, not sufficiently mature to be published in ICLR.
+
+
+ROUGE-1: 0.28837, ROUGE-2: 0.05634, ROUGE-L: 0.26047
+
+
+******Sample 21*******
+
+https://openreview.net/forum?id=ByghKiC5YX
+
+******Ground-truth meta-review*******
+
+I appreciate the willingness of the authors to engage in vigorous discussion about their paper. Although several reviewers support accepting this submission, I do not find their arguments for acceptance convincing. The paper considers automated methods for finding errors in text classification models. I believe it is valuable to study the errors our models make in order to understand when they work well and how to improve them. Crucially, in the later case, we should demonstrate how to use the errors we find to close the loop and create better models.
+
+A paper about techniques to find errors for text models should make a sufficiently large contribution to be accepted. I view the following hypothetical contributions as the most salient in this specific case thus my decision reduces to determining if any of these conditions have been met. A paper need not achieve all of these things, any one of them would suffice:
+
+1. Show that the errors found can be used to meaningfully improve the models. 
+
+This requires building a better model than the one probed by the method and convincingly demonstrating that it is superior in an important way that is relevant to the original goals of the application. Ideally it would also consider alternative, simpler ways to improve the models (e.g. making them larger).
+
+2. Show that errors are difficult to find, but that the proposed method is nonetheless capable of finding errors and that the method is non-obvious to a researcher in the field.
+
+This is not applicable here because errors are extremely easy to find on the test set and from labeling more data. If we demand an automated method, then the greedy algorithm does not qualify as sufficiently non-obvious and it seems to work fine, making the Gumbel method unnecessary.
+
+3. Show that the particular specific errors found are qualitatively different from other errors in their implications and that they provide a unique and important insight.
+
+I do not believe this submission attempts to show this type of contribution. One example of this type of paper would be a paper that does a comparative study of the errors that different models make and finds something interesting (potentially yielding a path to improved models).
+
+4. Generate a new, more difficult/interesting, dataset by finding errors of one or more trained models
+
+Given that the authors use human labelers to validate examples this is potentially another path. Here is an example of a paper using adversarial techniques in this way: https://arxiv.org/abs/1808.05326
+However, I believe the paper would need to be rethought and rewritten to make this sort of contribution.
+
+
+Ultimately, the authors and reviews supporting acceptance must explain the contribution succinctly and convincingly. The reviewers most strongly advocating for accepting this submission seem to be saying that there is a valuable new method and probabilistic framework proposed here for finding model errors. I believe researchers in the field could have easily come up with the greedy algorithm (a standard approach to discrete optimization problems) proposed here without needing to read the paper. Furthermore, I believe the other more complicated Gumbel algorithm proposed is not necessary given the similarly effective and simpler greedy algorithm. If the authors believe that the Gumbel algorithm provides application-relevant advantages over the greedy algorithm, then they should specify how these errors will be used and rewrite the paper to make the greedy algorithm a baseline. However, I do not believe the experimental results support this idea.
+
+
+******Generated meta-review by PRIMERA*******
+
+This paper proposes a probabilistic framework for studying adversarial attacks on discrete data. The proposed framework assumes a two step construction of an adversarial perturbation: 1) finding relevant features (or dimensions) to perturb (Eq. 3); 2) finding values to replace the features that are selected in step 1 (Eqs. 4). The authors approximate some terms in these two equations to make the optimization easier. For example, it is not clear why that should hold and under what conditions that assumption would be reasonable (given that the attacks on other features are adversarial, although being Probabilistic).
+
+The reviewers agree that adversarial examples on texts are interesting to study, as is explained by Reviewer 3, as well as for the reasons we explained in previous posts. On the other hand, we also understand it is natural for different people to be excited about different areas, and to feel certain pieces of work less interesting. We still appreciate Reviewer 4 for reading our rebuttal. 
+
+ROUGE-1: 0.27419, ROUGE-2: 0.04313, ROUGE-L: 0.25538
+
+
+******Generated meta-review by LED*******
+
+This paper proposes two new methods for generating adversarial examples for text classification models. The reviewers agree that the problem is important and the paper is well-written. However, the reviewers are not convinced that the attacks can be classified as “adversarial examples”, especially the ones on the word-based models. This is not surprising in the discrete case because the models considered certainly have a non-trivial amount of test error in the data distribution. It is also not surprising that models have such low accuracy when you adversarially select noise to maximize classification error rate in light of this phenomenon. 
+
+ROUGE-1: 0.21898, ROUGE-2: 0.06149, ROUGE-L: 0.20730
+
+
+******Generated meta-review by PegasusX*******
+
+The paper presents a novel framework for adversarial attacks on deep networks with discrete inputs such as text. The paper is well written and easy to understand. However, the paper is not ready for publication at ICLR. The main concern is that the paper does not provide a thorough analysis of the adversarial examples. The authors have provided a rebuttal and have addressed the concerns of the reviewers. However the paper still does not meet the bar for publication.
+
+ROUGE-1: 0.16616, ROUGE-2: 0.04242, ROUGE-L: 0.16012
+
+
+******Generated meta-review by RAMMER*******
+
+The reviewers all agree that the manuscript does not need to be reclassified for acceptance as we all read the paper with some reservations as we know that adversarial models can be effective in some cases. 
+The reviewers still think there is more work to be done in the context of the proposed solution to the problem of training adversarial examples for Gumbel.
+We think that the submission is not ready for publication in its current form, and have decided to reject it.
+
+ROUGE-1: 0.18318, ROUGE-2: 0.05120, ROUGE-L: 0.16817
+
+
+******Sample 22*******
+
+https://openreview.net/forum?id=dV19Yyi1fS3
+
+******Ground-truth meta-review*******
+
+Quantization is an important practical problem to address.  The proposed method which quantizes a different random subset of weights during each forward is simple and interesting. The empirical results on RoBERTa and EfficientNet-B3 are good, in particular, for int4 quantization.  During the rebuttal, the authors further included quantization results on ResNet which were suggested by the reviewers. This additional experiment is important for comparing  this proposed approach with the existing methods which do not have quantization results on the models in this paper. 
+
+******Generated meta-review by PRIMERA*******
+
+This paper proposes a new compression-aware training method utilizing quantization noise as a regularization technique. During training, only a different random subset of weights is quantized for forward propagation such that controlling the amount of noise is a way to improve model accuracy when extreme compression is applied. 
+
+The reviewers agree that the paper is well written and clearly articulates a contribution to the literature. The proposed Quant-Noise is intuitive and straightforward. The experimental evidence is provided for both image classification and language modeling tasks. Most of the related works are cited. The claims are supported by experimental results on different neural network models and applications, showing a good trade-off between accuracy and neural network compression. The results are very good in terms of compression rate accuracy and state-of-the-art accuracy, and the experiments are obtained on complex neural network and neural model and applications. The combination of int-8 and Product-deployable hardware results in compressed compressed networks.
+
+However, the novelty of the proposed method is limited and why it works is not very clear. Besides, the improvement of Quant- noise for int8 quantization looks very limited. The authors should focus on low-bit quantization in the experiment section and test the proposed methods on more low- bit quantization settings (e.g., 2bits quantization, 3bitsquantization, mix-precision quantisation, etc).
+
+ROUGE-1: 0.32362, ROUGE-2: 0.07818, ROUGE-L: 0.31068
+
+
+******Generated meta-review by LED*******
+
+The paper proposes a method for quantizing neural networks that works on a variety of architectures, tasks and quantization methods (scalar or product quantization), allowing to reach a good compromise between model size and accuracy. The reviewers agree that the paper is well written and clearly articulates a contribution to the literature. However, the novelty of the proposed method is limited and why it works is not very clear. The experiments are not fair and detailed analysis and discussion of the experimental results are required.
+
+ROUGE-1: 0.37870, ROUGE-2: 0.03593, ROUGE-L: 0.34320
+
+
+******Generated meta-review by PegasusX*******
+
+The paper proposes a new method for quantization-aware training, which quantizes a random fraction of the network at each step instead of quantizing the entire network. The experiments show that the proposed Quant-Noise can improve the accuracy of quantized neural networks. The paper is well written and the claims are supported by experimental results on different neural network models and applications. The proposed method is validated on multiple models like Transformer, ConvNet, and more challenging EfficientNet-B3. The paper has been improved during the rebuttal phase, but the novelty of the proposed method remains limited. The experimental results are not fair and the experimental results only show results for INT4, INT8, and iPQ. The authors should include more comparisons with other SOTA fix-point quantization and binarization schemes in [1-4].
+
+ROUGE-1: 0.44240, ROUGE-2: 0.09302, ROUGE-L: 0.40553
+
+
+******Generated meta-review by RAMMER*******
+
+The reviewers find this paper interesting, but in several aspects too limited for acceptance due to the limited presentation and presentation.  No one had an interest to the paper before now.
+
+ROUGE-1: 0.20870, ROUGE-2: 0.03540, ROUGE-L: 0.17391
+
+
+******Sample 23*******
+
+https://openreview.net/forum?id=BJgkbyHKDS
+
+******Ground-truth meta-review*******
+
+This paper studies the empirical performance of invertible generative models for compressive sensing, denoising and in painting. One issue in using generative models in this area has been that they hit an error floor in reconstruction due to model collapse etc i.e. one can not achieve zero error in reconstruction. The reviewers raised some concerns about novelty of the approach and thoroughness of the empirical studies. The authors response suggests that they are not claiming novelty w.r.t. to the approach but rather their use in compressive techniques. My own understanding is that this error floor is a major problem and removing its effect is a good contribution even without any novelty in the techniques. However,  I do agree that a more thorough empirical study would be more convincing. While I can not recommend acceptance given the scores I do think this paper has potential and recommend the authors to resubmit to a future venue after a through revision.
+
+******Generated meta-review by PRIMERA*******
+
+This paper extends the invertible generative model of Kingma et. al. to image inverse problems. Specifically, they use Generator trained within the Glow framework as an image prior for de-noising, inpainting and compressed sensing tasks. During training, a heuristic adjustment to the objective is made allowing optimization of latent variable norm instead of image log likelihood. The use of Glow prior was shown to be beneficial for all inverse tasks. Experiments were limited to face images from celebA database. While the proposal demonstrates improved empirical performance, it seems to be the only contribution of this paper. Taking an existing model and applying it to a problem where similar extensions have been tried (GAN etc) does not seem quite worthy of a full paper. The authors are reasonably thorough, testing their model on a variety of problem settings and perform ablation studies on hyperparameters. As additional baselines for compressed sensing and denoising, it would be good to compare to the Deep Image Prior since there is effectively no out-of-distribution input for this untrained model and it performs well with moderate image corruption. 
+
+ROUGE-1: 0.35942, ROUGE-2: 0.06997, ROUGE-L: 0.33043
+
+
+******Generated meta-review by LED*******
+
+This paper proposes to employ the likelihood of the latent representation of images as the optimization target in the Glow (Kingma and Dhariwal, 2018) framework. The authors argue that to optimize the ''proxy for image likelihood'' has two advantages: First, the landscapes of the surface are more smooth; Second, a latent sample point in the regions that have a low likelihood is able to generate desired outcomes. This behavior was not known before this paper and can not be found in the previous literature either on invertible neural networks or on the literature in signal recovery. In the experimental analysis, the authors compare their proposed method with several baselines and show prior performance. 
+
+The reviewers agree that the novelty of this paper is trivial, in my opinion, the Eq. 2 is the only contribution of the paper. Taking an existing model and applying it to a problem where similar extensions have been tried (GAN etc) does not seem quite worthy of a full paper. The experimental results are not convincing, almost all the methods proposed after 2015 have better performance compared to these baseline methods.
+
+ROUGE-1: 0.39884, ROUGE-2: 0.07558, ROUGE-L: 0.36416
+
+
+******Generated meta-review by PegasusX*******
+
+The paper presents a new invertible neural network framework for image priors. The paper is well written and the results are convincing. However, the novelty of the paper is not high enough and the experimental results are not convincing.
+
+ROUGE-1: 0.22000, ROUGE-2: 0.03030, ROUGE-L: 0.21000
+
+
+******Generated meta-review by RAMMER*******
+
+This paper shows that sparsity priors are significantly more sensitive to representation error than other approaches in training models to predict invertible generative models. This shows the strength of the formulation, the ability to improve performance, and it can be used to improve the optimization efficiency in sparsity pretraining. The results are sufficiently strong, and the writing is clear and clear. After discussion, there was a consensus between the reviewers and authors. This paper is strong and likely will be of interest to researchers, and I concur in this view.
+
+The main issues raised by reviewers are lack of empirical justification for the idea, and a limited experimental demonstration. The author did not provide any arguments which support their claims. I encourage the authors to revise the paper according to the reviewers' comments and resubmit to a future venue, and be suitable for submission in a form that cannot incorporate this idea to ICLR. The work is not ready for ICLM.
+
+ROUGE-1: 0.43478, ROUGE-2: 0.09375, ROUGE-L: 0.39752
+
+
+******Sample 24*******
+
+https://openreview.net/forum?id=GNv-TyWu3PY
+
+******Ground-truth meta-review*******
+
+The paper proposes an algorithm with sublinear regret for the problem of routing users through a network with unknown congestion functions over an infinite time horizon. The reviewers generally appreciated the main contribution of this work. One of the reviewers also felt that, although it may be possible to obtain the main result using more standard techniques, it is not clear whether doing so is an easy extension of the prior work. Following the discussion, all of the reviewers agreed that the paper missed important related work and it needs a major revision that incorporates the extensive feedback of Reviewer 2. For these reasons, I recommend reject.
+
+******Generated meta-review by PRIMERA*******
+
+This paper studies the problem of routing users according to their requests through a network with unknown congestion functions over an infinite time horizon. They model the problem as follows. A directed graph G(V,E) is given, where each edge is associated with a congestion function f_e that maps the flow along edge e to some positive real. The mild assumption the authors make on the congestion functions of all edges is that they are L-Lipschitz. At every timetick a car enters the routing app, and asks to move from a source to destination. This choice incurs a cost, which is the noisy version of the sum of the congestions along the edges of the path Again, the author(s) make the reasonable assumption that the noise is zero mean and bounded by some value beta. The model is nicely motivated by real-world aspects of routing apps, and is a clean mathematical model. The key result is stated as Theorem 1.1. I checked the proof, and it appears solid. The authors design algorithm 1. ITs intuition is well described in section 2.1 Some comments to the authors of the paper follow - Is the Lipschitzer constant known? If not, is there a way to test this assumption? 
+
+The authors correctly point out that doubling $T$ will have the effect of dynamic (or periodically) shrinking the bucket size, and this has similarity with dynamic bucketing proposed in the current paper. However, the assessment that my approach "seems to have been designed using novel insights we provide in our work (e.g., shrinking bucket sizes)", is completely incorrect. The design proposed uses modifications of prior work in a non-obvious way and we were not able to verify it after spending a significant amount of time reading the cited papers. We are certainly not dismissing the reviewer's suggestions, a comment we consider unfair, since we have agreed to discuss the papers in the related work section, and the authors should further investigate the proposals and make their assessments and conclusions, and include their investigations in the revised paper as an improvement. 
+
+
+ROUGE-1: 0.28571, ROUGE-2: 0.10870, ROUGE-L: 0.26407
+
+
+******Generated meta-review by LED*******
+
+This paper studies the problem of routing users according to their requests through a network with unknown congestion functions over infinite time horizon. The main contribution is a novel UCB-like algorithm with a dynamic regret bound after T steps of |E|T^{2/3} (ignoring log factors in T). This is larger than the rate |E |T^{1/2} achievable for *adversarial* combinatorial semi-bandits, but ---as we said--- the problem studied here is more general. The algorithm uses a hierarchical and dynamical bin structure to produce convergent estimates of f_e(x) for different values of x. As the number of buckets approaches infinity, the cost estimation approaches perfect accuracy. This is a nice idea which is not standard in the bandit literature. The analysis of the algorithm is quite involved and apparently novel for the most part. However, there are a number of issues in the paper that makes the overall contribution questionable, as I list below. In particular, the authors is missing an entire line of very relevant result work and results. The design proposed uses modifications of prior work in a non-obvious way and we were not able to verify it after spending a significant amount of time reading the cited papers. The authors should further investigate the proposals and make their assessments and conclusions, and include their investigations in the revised paper as an improvement.
+
+ROUGE-1: 0.37758, ROUGE-2: 0.13650, ROUGE-L: 0.33038
+
+
+******Generated meta-review by PegasusX*******
+
+The paper presents a new algorithm for routing users through a network with unknown congestion functions over an infinite time horizon. The main result is a novel UCB-like algorithm with a dynamic regret bound after T steps of |E|T2/3 (ignoring log factors in T). The paper is well written and the results are interesting. However, the paper is not ready for publication at ICLR. The authors have not responded to the concerns raised by the reviewers. The paper should be revised and resubmitted to a future venue.
+
+ROUGE-1: 0.42640, ROUGE-2: 0.21538, ROUGE-L: 0.40609
+
+
+******Generated meta-review by RAMMER*******
+
+This is an interesting paper that proposes to solve a problem on top of a prior based on the network density and an L-O notation. I find this to be a solid contribution that's worth publication. 
+
+
+ROUGE-1: 0.27586, ROUGE-2: 0.01399, ROUGE-L: 0.22069
+
+
+******Sample 25*******
+
+https://openreview.net/forum?id=mqIeP6qPvta
+
+******Ground-truth meta-review*******
+
+This paper introduces an architecture that uses pooling regions and
+eye movements to sequentially build up an object representation.  A 
+confidence threshold is used to allow recognition in less time for
+easier images.
+
+There was a lot of disagreement on this paper.  Those in favor argued 
+that it is a worthy endeavor to explore new biologically motivated
+architectures and foveated eye movements are an important aspect of  
+human vision that is worth exploring for computer vision.  Another pro
+was the improved robustness to some adversarial attacks.  Those
+arguing for not accepting the paper, argued that classification
+performance is not improved over SOTA and that more ablation studies 
+should be done to better understand the role and importance of the
+various aspects of the model and how they differ from other
+architectural designs with dilated convolutions instead of the 
+foveation module.
+ 
+I agree that more ablation studies would be useful to better
+understand the role of the different model components. While I 
+feel that this novel sequential processing algorithm is worth publishing to
+increase activity in this area, I feel it would be best received after further 
+studies help clarify the importance of different aspects of the model.
+I recommend resubmission after further analysis.
+
+******Generated meta-review by PRIMERA*******
+
+This paper proposes a method of Foveated Transformer motivated by a human foveal vision where the spatial resolution varies depending on the focused point. The proposed method mainly consists of the spatial attention model that controls the gaze point and spatial-varying convolutional filter (dense pooling in center and sparse pooled in peripheral). The former simulates human gaze control and the latter mimics the human retina. The experimental validation is performed by the object recognition task (ImageNet) and adversarial attack tasks and performed better than the Deit-Tiny model that uses a similar number of parameters. The method presents a unique idea of computer vision tasks based on the human perceptional system. Since humans archive vision processings with limited computing resources, employing the idea may work for computing tasks with the limited resource, thus, the idea proposed in this paper may give an impact on the community. However, the reviewers still wonder about the effectiveness of the method due to the lack of comparison with existing methods. The performance of ImageNet task is far from SOTA. I understand the main claim of the paper is introducing a new scheme that increases the performance of the existing algorithm, but if so, the question is why the paper used DeTiny for the reference. It was limited to 20 classes of the PASCAL dataset compared to our results on the entire ImageNet dataset. Their model isbased on the older deformable parts model ([3]). They make the eye movements to locations with the highest evidence for the target after classifying all the templates, whereas we use an attention mechanism to direct eye movements before the final classification. Additionally, unlike that study, we investigate the adversarial robustness of our model. 
+
+ROUGE-1: 0.38525, ROUGE-2: 0.06996, ROUGE-L: 0.36885
+
+
+******Generated meta-review by LED*******
+
+This paper proposes a foveated vision model based on a hybrid transformer-CNN architecture, which demonstrates many of the strengths of sequential processing, namely computational efficiency and adversarial robustness. The reviewers agree that this is an interesting and novel approach. However, the reviewers also agree that the novelty of the proposed method is limited, and the experimental results are not strong enough to support the claims of the paper.
+
+ROUGE-1: 0.30147, ROUGE-2: 0.05926, ROUGE-L: 0.27941
+
+
+******Generated meta-review by PegasusX*******
+
+The paper presents a method of foveated Transformer based on a vision Transformer architecture. The method is motivated by a foveal vision where the spatial resolution varies depending on the focused point. The proposed method mainly consists of the spatial attention model that controls the gaze point and spatial-varying convolutional filter (dense pooling in center and sparse pooling in peripheral). The method uses a confidence threshold to stop scene exploration, dynamically allocating more fixation/computational resources to more challenging images. After reaching the stopping criterion, the model makes the final object category decision. The paper proposes a unique idea of computer vision tasks based on the human perceptional system. The authors present a Foveated model using their proposed approach and compare it against a Full-resolution model, which does not contain any pooling. The experimental validation is performed by the object recognition task (ImageNet) and adversarial attack tasks and performed better than the Deit-Tiny model that uses a similar number of parameters. The main concern of the paper is the lack of technical novelty. The idea is interesting and the method is novel. However, the experimental validation was not convincing enough. The performance of the proposed method is not strong enough.
+
+ROUGE-1: 0.36453, ROUGE-2: 0.05446, ROUGE-L: 0.33990
+
+
+******Generated meta-review by RAMMER*******
+
+This paper proposed a method for transformer model and foveation with a transformer-based vision transformer, which makes the input images relatively more robust to adversarial attacks, while maintaining an attention-based model with a limited number of feature representations. The paper was initially reviewed by three expert reviewers, two from NN, one from NT.  All reviewers are in favour of acceptance, and the authors did a good job in rebuttal addressing the reviewer concerns. 
+
+All the reviewers recommend acceptance.  The authors are encouraged to take the reviewers' comments into consideration to improve their submission.
+
+ROUGE-1: 0.28188, ROUGE-2: 0.04730, ROUGE-L: 0.27517
+
+
+******Sample 26*******
+
+https://openreview.net/forum?id=rk6H0ZbRb
+
+******Ground-truth meta-review*******
+
+I am somewhat of two minds from the paper. The authors show empirically that adversarial perturbation error follows power law and looks for a possible explanation. The tie in with generalization is not clear to me and makes me wonder how to evaluate the significance of the finding of the power law distribution..  On the other hand, the authors present an interesting analysis, show that the finding holds in all the cases they explored and also found that architecture search can be used to find neural networks that are more resilient to adversarial search (the last shouldn't be surprising if that was indeed the training criterion).
+
+All in all, I think that while the paper needs a further iteration prior to publication, it already contains interesting bits that could spur very interesting discussion at the Workshop.
+
+(Side note: There's a reference missing on page 4, first paragraph)
+
+******Generated meta-review by PRIMERA*******
+
+This paper presents an empirical study aiming at improving the understanding of the vulnerability of neural networks to adversarial examples. The main observation of the study is that the vulnerability is due to an inherent uncertainty that neural networks have about their predictions ( the difference between the logits). This is consistent across architectures, datasets. Further, the authors note that "the universality is not a result of the specific content of these datasets nor the ability of the model to generalize." While this empirical study contains valuable information, its above conclusions are factually wrong. It can be theoretically proven at least using two routes. They are also in contradiction with other empirical observations consistent across several previous studies.
+
+ROUGE-1: 0.37594, ROUGE-2: 0.06818, ROUGE-L: 0.32331
+
+
+******Generated meta-review by LED*******
+
+This paper presents an empirical study aiming at improving the understanding of the vulnerability of neural networks to adversarial examples. The main observation of the study is that the vulnerability is due to an inherent uncertainty that neural networks have about their predictions ( the difference between the logits). This is consistent across architectures, datasets, and attacks. The authors show that distributions of logit differences have a universal functional form. This functional form is independent of architecture, dataset, and training protocol; nor does it change during training. They show that this universality holds for a broad range of datasets (MNIST, CIFAR10, ImageNet, and random data), models (including state-of-the-art deep networks, linear models, adversarially trained networks, and networks trained on randomly shuffled labels), and attacks (FGSM, step l.l., PGD). Motivated by these results, the authors propose two methods for improving adversarial robustness (entropy regularization and NAS with reinforcement learning). 
+
+ROUGE-1: 0.32000, ROUGE-2: 0.07383, ROUGE-L: 0.27333
+
+
+******Generated meta-review by PegasusX*******
+
+The paper presents a study of adversarial robustness of neural networks. The main observation of the paper is that adversarial error follows a power low as a function of the perturbation size epsilon for small eps. The authors show that this is true across a broad range of datasets, models, and attacks. The paper also proposes two methods for improving adversarial robustness (entropy regularization and NAS with reinforcement learning). The paper is well written and the results are interesting. However, the main concern of the reviewers is that the conclusions of the study are misleading. The author response was not convincing enough. The AC agrees with the reviewers and recommends rejection.
+
+ROUGE-1: 0.37692, ROUGE-2: 0.09302, ROUGE-L: 0.31538
+
+
+******Generated meta-review by RAMMER*******
+
+The paper proposes a new algorithm for the Bayesian robustness of neural architecture that can handle adversarial noise.
+
+I think the paper is interesting, but I agree with the reviewers in that it does not seem to have done any meaningful experiments on much of the experimental literature.
+
+
+ROUGE-1: 0.28426, ROUGE-2: 0.04103, ROUGE-L: 0.22335
+
+
+******Sample 27*******
+
+https://openreview.net/forum?id=BJeTCAEtDB
+
+******Ground-truth meta-review*******
+
+The paper proposed the use of a lossy transform coding approach to to reduce the memory bandwidth brought by the storage of intermediate activations. It has shown the proposed method can bring good memory usage while maintaining the the accuracy.
+The main concern on this paper is the limited novelty. The lossy transform coding is borrowed from other domains and only the use of it on CNN intermediate activation is new, which seems insufficient. 
+
+******Generated meta-review by PRIMERA*******
+
+The paper proposes to reduce the memory bandwidth of edge devices deploying CNNs by applying PCA transforms on feature vectors at all spatial locations followed by uniform quantization and variable-length coding. In the experimental analyses, the proposed method outperforms some of the previous work in terms of the compression ratio and accuracy for training ResNet-34 and MobileNetV2. The proposed method and initial results are promising. However, the paper and the work should be improved for a clear acceptance.
+
+ROUGE-1: 0.37662, ROUGE-2: 0.10526, ROUGE-L: 0.32468
+
+
+******Generated meta-review by LED*******
+
+This paper proposes to reduce the memory bandwidth of edge devices deploying CNNs by applying PCA transforms on feature vectors at all spatial locations followed by uniform quantization and variable-length coding. 
+
+The reviewers are in agreement that the paper is not ready for publication at ICLR2020. 
+
+ROUGE-1: 0.31405, ROUGE-2: 0.13445, ROUGE-L: 0.24793
+
+
+******Generated meta-review by PegasusX*******
+
+The paper proposes a lossy transform coding approach to reduce the memory bandwidth of edge devices deploying CNNs. The proposed method compresses highly correlated feature maps using variable length coding. The paper and the work should be improved for a clear acceptance.
+
+ROUGE-1: 0.41379, ROUGE-2: 0.22807, ROUGE-L: 0.41379
+
+
+******Generated meta-review by RAMMER*******
+
+This paper proposes a neural convolutional network using QF(q) networks for computing PCA, as the paper addresses the issue of quantization with FPG as an auxiliary task.
+
+The idea of quantization of the network is a new, interesting and interesting direction for computing QF (q).  The reviewers agreed this work can be made a strong case for acceptance at NeurIPS in the context of PCA. There is nothing to argue against it and I agree with the authors that it is well-written and proposes an effective approach to this problem.
+
+ROUGE-1: 0.33735, ROUGE-2: 0.04878, ROUGE-L: 0.31325
+
+
+******Sample 28*******
+
+https://openreview.net/forum?id=KmNHWX9H7Kf
+
+******Ground-truth meta-review*******
+
+The paper provides a uniform generalization bound for overparameterized neural networks using the notion of maximal information gain. The analysis relies on the eigendecay of the eigenvalues of the NTK, which has recently been the object of a lot of work in the literature, including the work of Bietti and Bach (the proof actually uses one of their key lemma).
+
+The paper originally received a set of reviews with a large disagreement between the reviewers (including two reviewers with a negative opinion and three reviewers being more positive). After the discussion period, two reviewers kept a very negative opinion, while other reviewers slightly lowered their score. Some of the problems raised by the reviewers include the restrictions imposed on the data, a missing proof (which was eventually added by the authors), the discussion of prior work being inadequate (including for instance the differences with more classical generalization bounds), and the novelty of the analysis.
+
+Overall, the paper clearly has some merits but some of the concerns above are too important at this stage to accept the paper. I recommend the authors address the concerns mentioned in the reviews before re-submission.
+
+******Generated meta-review by PRIMERA*******
+
+The paper provides a uniform generalization bound for overparameterized neural networks by assuming that the target function resides in the reproducing kernel Hilbert spaces generated by Neural Tangent (NT) kernels associated with general ReLU activation functions. The approach is based on so-called maximum information gain, which is neat. The equivalence of the RKHSs generated by NT kernels and Matern kernels are discussed. 
+
+The reviewers agree that the paper is well-written and technically sound. The main contribution of this paper is to characterise the eigenvalue decay of the neural Tangent Kernels associated with fully-connected neural networks evaluated on the hypersphere when the activation functions of the form $Relu^{s}$ where $s$ is a parameter that regulates the smoothness of the activation function. The results generalise existing results for the particular case $s=1$, i.e. the case of ReLU activations [1,2]. The idea of the proof is to rely on a recent result from [1] which bounds the Eigenvalye decay of an arbitrary rotationally invariant kernel based on smoothness and end-point asymptotic properties of the kernel written as a function from $[-1,1]$ to $\mathbb{R}$. The computation of theAsymptotics relies on an elegant use of Stein's Lemma as well as the recurrent relation between the NTK and RFK (random feature kernel) of various layers. Results for the eigendecomposition of the NT kernel in the basis of spherical harmonics and the decay rate of the corresponding eigenvalues are also provided.
+
+In the discussion phase, the reviewers pointed out the following weaknesses: (1) The assumption that the approximation error is zero is kind of strong. (2) The benefit of using ReLU with $s>1$ is not so clear to me. Is it possible to consider other more general activation functions and derive similar MIG bounds? (3) In Section 6, why choose $\hat{Y}\subset\mathbb(R}^d$? Is $d$ the dimension of the input space? It is also a little bit strange that you let $f$ depend on $\hat(k}_{n_0}$ when you are trying to compare the error exponent over $s$. (4) Are the rates derived in Theorem 3 minimax optimal? (5) The approach based on maximum
+
+ROUGE-1: 0.33935, ROUGE-2: 0.10507, ROUGE-L: 0.30686
+
+
+******Generated meta-review by LED*******
+
+This paper provides a uniform generalization bound for overparameterized neural networks in kernel regimes, when the true data generating model belongs to the reproducing kernel Hilbert space (RKHS) corresponding to the NT kernel. The paper is well-written and the results make non-trivial extensions over the state-of-the-art. The reviewers agree that the paper is a valuable paper from the purely mathematical point of view (with limited practical applicability), but some parts are a bit rushed and the placement of the paper within the broader literature and other pedagogical aspects are somewhat neglected.
+
+ROUGE-1: 0.32056, ROUGE-2: 0.11930, ROUGE-L: 0.29965
+
+
+******Generated meta-review by PegasusX*******
+
+The paper presents a uniform generalization bound for overparameterized neural networks in kernel regimes, when the true data generating model belongs to the reproducing kernel Hilbert space (RKHS) corresponding to the NT kernel. The paper is well written and the results make non-trivial extensions over the state-of-the-art. The authors also provide a novel error bound on regression with neural kernels. The main concern of the paper is that the results are trivial and can be easily obtained. The rebuttal addressed some of the concerns, but the paper still falls below the acceptance threshold.
+
+ROUGE-1: 0.35417, ROUGE-2: 0.13287, ROUGE-L: 0.32639
+
+
+******Generated meta-review by RAMMER*******
+
+The paper is clearly written and well-written. The proposed approach is well-motivated, and, when analyzed carefully, the work is of good quality. The paper is clear and easy to understand, and has good empirical results. The idea of using a different-ii-i-m kernel in a prior, combined with the fact that this algorithm is well tested with a relatively small amount of data, is useful for many applications. There are however concerns that the paper has limited novelty, and I cannot recommend the paper for publication.
+
+ROUGE-1: 0.29893, ROUGE-2: 0.05018, ROUGE-L: 0.24911
+
+
+******Sample 29*******
+
+https://openreview.net/forum?id=Rhl8IoYzdSI
+
+******Ground-truth meta-review*******
+
+The paper proposes to model uncertainty by combining quantile
+regression and Chebyshev polynomial approximation. The paper addresses
+the important problem of uncertainty quantification for black box
+models. However, some major concerns remain after the discussion among
+the reviewers. In particular, there has been some concerns around the
+clarity of the presentation. The proposal lacks a clear use case, e.g.
+where satisfying constrained black-box uncertainty problem is a
+must-have.
+
+
+******Generated meta-review by PRIMERA*******
+
+This paper proposes a novel approach to modeling uncertainty, as an layer added-on to an otherwise black-box system. The ChePAN uses a neural network to estimate per-quantile roots of a chebyshev polynomial, then uses a quantile regression loss to fit these coefficients using backpropagation. 
+
+The reviewers found the paper to be well-written and well-motivated. However, the paper lacks a clear, formal description of the problem, and as a result, it is difficult to see precisely where the existing methods fall short (or even which ones are relevant), and how the proposed procedure addresses these shortcomings. The proposed method appears to be a heuristic based on approximations that may be reasonable, but requires some justification.
+
+ROUGE-1: 0.38947, ROUGE-2: 0.13830, ROUGE-L: 0.36842
+
+
+******Generated meta-review by LED*******
+
+This paper proposes a new method for constrained black-box uncertainty modelling, which is based on Chebyshev polynomial approximation and quantile regression. The reviewers agree that the paper is well-written and the proposed method is novel and interesting. However, there are several concerns raised by the reviewers about the presentation of the paper, which the authors are encouraged to address in the final version.
+
+ROUGE-1: 0.52941, ROUGE-2: 0.19403, ROUGE-L: 0.47059
+
+
+******Generated meta-review by PegasusX*******
+
+The paper presents a novel approach to modeling uncertainty, as an layer added-on to an otherwise black-box system. The ChePAN uses a neural network to estimate per-quantile roots of a chebyshev polynomial, then uses a quantile regression loss to fit these coefficients using backpropagation. The method seems novel to the prior work and achieves good results in capturing uncertainty in predictive modeling. The paper is generally well-written, though I am leaning toward rejecting the paper because the ideas are poorly motivated and the text does a poor job of convincing readers there is an open problem being addressed here that prior work has not already done.
+
+ROUGE-1: 0.37569, ROUGE-2: 0.07821, ROUGE-L: 0.36464
+
+
+******Generated meta-review by RAMMER*******
+
+This paper presents a novel approach for the problem of estimating a quantum uncertainty in the initial black-box from a fixed-point estimate, which provides a new way of studying quantile regression. The reviewers were mostly positive about this method, and some of the proposed assumptions appeared to be valid and reasonable. The AC therefore recommends acceptance, although reviewers raised a number of concerns regarding the applicability of this approach. The authors are strongly encouraged to continue to improve their methods based on the reviewers' suggestions. 
+
+
+ROUGE-1: 0.35443, ROUGE-2: 0.07692, ROUGE-L: 0.31646
+
+
+******Sample 30*******
+
+https://openreview.net/forum?id=BygfrANKvB
+
+******Ground-truth meta-review*******
+
+The authors present a new approach to improve performance for retro-synthesis using a seq2seq model, achieving significant improvement over the baseline. There are a number of lingering questions regarding the significance and impact of this work. Hence, my recommendation is to reject. 
+
+******Generated meta-review by PRIMERA*******
+
+This paper proposes a new model for making generalizable and diverse retrosynthetic reaction predictions. Given a target compound, the authors suggest a method to predict likely chemical reactants to produce the target. The authors provide a transformer based model to predict the reactants. Existing methods do not generalize well for rare reactions and the training data has only one reactant set for each target even though that may not be the only way to synthesize the compound. To solve this problem, the author use a pretraining method similar to BERT. Instead of just using token masking, they provide alternate proxy decompositions for a target molecule by randomly removing bond types that are likely to break and by transforming the target based on known templates. This is a well written paper with good baselines. The experiments are carefully designed and show that both pretraining and data augmentation helps. Overall, I think the community will benefit from this work.
+
+ROUGE-1: 0.20000, ROUGE-2: 0.04040, ROUGE-L: 0.16000
+
+
+******Generated meta-review by LED*******
+
+This paper proposes a method to improve performance for retro-synthesis of chemical targets in a seq2seq setting. The reviewers agree that this is a well-written paper with good baselines. The main contribution of this paper is to apply the state-of-the-art Transformer model and other techniques in NLP to address the specific issues in retrosyntheses. The experiments in the paper also show the effectiveness of the two main contributions. The authors can consider using diverse datasets or applying their techniques to another application domain to bolster their claims.
+
+ROUGE-1: 0.34074, ROUGE-2: 0.13534, ROUGE-L: 0.31111
+
+
+******Generated meta-review by PegasusX*******
+
+The paper proposes a method to predict likely chemical reactants to produce the target. The authors provide a transformer based model to predict the reactants. The paper is well written and combines the state-of-the-art NLP model and the domain knowledge in retrosynthetic reaction predictions. The main contribution of this paper is to apply the state of the art Transformer model and other techniques in NLP to address the specific issues in retrosynthesis. Both the pre-training model and a mixture model are combining the specific domain knowledge to improve the generalization and diversity of retrosynthesis, and the experiments are carefully designed and show that both pretraining and data augmentation helps. The novelty of the method is not huge, but the authors have addressed the concerns raised by the reviewers. The AC agrees with the reviewers and recommends acceptance.
+
+ROUGE-1: 0.19565, ROUGE-2: 0.04396, ROUGE-L: 0.16304
+
+
+******Generated meta-review by RAMMER*******
+
+The paper presents a novel idea to transform reactions from the state-of-the-art into a target-series pre-trained model to predict the return characteristics in the latent phase of a particular environment.  Reviewers all agree that this method is novel, interesting and simple. They find the approach to be effective and well written.  However, they remain unsure about the connection with existing approaches.  All reviewer's concerns have been addressed during the rebuttal phase.  The only major weakness remains the use of tensor parameters - even though this is a straightforward combination of the baselines.  Therefore, this paper does not have sufficient merit in its current form.  
+
+
+ROUGE-1: 0.23684, ROUGE-2: 0.04000, ROUGE-L: 0.23684
+
+
+******Sample 31*******
+
+https://openreview.net/forum?id=BylQV305YQ
+
+******Ground-truth meta-review*******
+
+The reviewers that provided extensive and technically well-justified reviews agreed that the paper is of high quality. The authors are encouraged to make sure all concerns of these reviewers are properly addressed in the paper.
+
+******Generated meta-review by PRIMERA*******
+
+This paper studies the effect of staleness on the learning efficiency in distributed machine learning systems. The authors observe staleness and its impact, for the first time to their knowledge, on 12 key models and algorithms, and propose a new convergence analysis of SGD in non-convex optimization under staleness, matching the best-known convergence rate of O(1/\sqrt{T}).
+
+All reviewers agree that the paper is well-written and the results are very interesting, but the simulation could have been more thorough. Specifically, the same hyperparameter values were used across batch sizes and across different values of the distributed delay. Some algorithms failed to converge under some settings and others experienced dramatic slowdowns, but without careful study of hyperparameters it's hard to tell whether these behaviors are normal or outliers. Also it would have been interesting to see a recurrent architecture there, as I've heard much anecdotal evidence about the robustness of RNNs and LSTMs to asynchronous training.
+
+ROUGE-1: 0.21212, ROUGE-2: 0.06122, ROUGE-L: 0.18182
+
+
+******Generated meta-review by LED*******
+
+This paper studies the effect of staleness on the convergence of a wide array of ML models and algorithms under delayed updates. Through systematic experiments, the authors explicitly observe staleness and its impact, for the first time to our knowledge, on 12 key models and algorithm. The paper also introduces gradient coherence (GC), which is related to the impact of the staleness for gradient-based optimization. The empirical findings also inspire a new convergence analysis of SGD in non-convex optimization under staleness, matching the best-known convergence rate of O(1/\sqrt{T}).
+
+ROUGE-1: 0.20000, ROUGE-2: 0.03125, ROUGE-L: 0.18462
+
+
+******Generated meta-review by PegasusX*******
+
+The paper studies the effect of staleness on the convergence of ML algorithms under delayed updates. The paper is well written and the results are interesting. However, the paper could be improved by more thorough experiments.
+
+ROUGE-1: 0.33333, ROUGE-2: 0.08571, ROUGE-L: 0.27778
+
+
+******Generated meta-review by RAMMER*******
+
+The paper develops a new algorithm that can converge under certain settings. The paper was very well-written, and all the reviewers (both the theoretical and the experimental support) found it interesting.
+
+ROUGE-1: 0.32353, ROUGE-2: 0.09091, ROUGE-L: 0.26471
+
+
+******Sample 32*******
+
+https://openreview.net/forum?id=B1lCn64tvS
+
+******Ground-truth meta-review*******
+
+SAT is NP-complete (Karp, 1972) due its intractable exhaustive search. As such, heuristics are commonly used to reduce the search space. While usually these heuristics rely on some in-domain expert knowledge, the authors propose a generic method that uses RL to learn a branching heuristic. The policy is parametrized by a GNN, and at each step selects a variable to expand and the process repeats until either a satisfying assignment has been found or the problem has been proved unsatisfiable. The main result of this is that the proposed heuristic results in fewer steps than VSIDS,  a commonly used heuristic. 
+
+All reviewers agreed that this is an interesting and well-presented submission. However, both R1 and R2 (rightly according to my judgment) point that at the moment the paper seems to be conducting an evaluation that is not entirely fair. Specifically, VSIDS has been implemented within a framework optimized for running time rather than number of iterations, whereas the proposed heuristic is doing the opposite. Moreover, the proposed heuristic is not stressed-test against larger datasets. So, the authors take a heuristic/framework that has been optimized to operate specifically well on large datasets (where running time is what ultimately makes the difference) scale it down to a smaller dataset and evaluate it on a metric that the proposed algorithm is optimized for. At the same time, they do not consider evaluation in larger datasets and defer all concerns about scalability to the one of industrial use vs answering ML questions related to whether or not it is possible to  “stretch existing RL techniques to learn a branching heuristic”. This is a valid point and not all techniques need to be super scalable from iteration day 0, but this being ML, we need to make sure that our evaluation criteria are fair and that we are comparing apples to apples in testing hypotheses. As such, I do not feel comfortable suggesting acceptance of this submission, but I do sincerely hope the authors will take the reviewers' feedback and improve the evaluation protocols of their manuscript, resulting in a stronger future submission.
+
+******Generated meta-review by PRIMERA*******
+
+The paper proposes learning a branching heuristic to be used inside the SAT solver MiniSat using reinforcement learning. The state is represented as a graph representation of the Boolean formula as in previous works, and the policy is parameterized as agraph neural network. At each step of an episode the policy selects a variable to branch on and assigns a value to it. The episode terminates once the solver finds a satisfying assignment or proves unsatisfiability. The reward function encourages the policy to reach terminal state in as few steps as possible. The policy is trained using DQN. Results on randomly generated SAT instances show that the learned policy is able to solve problems with fewer steps than VSIDS, the branching-heuristic commonly used by state-of-the-art solvers.
+
+The paper is well-motivated (improving speed of complete SAT solvers) and presents a good overview of related work. The conceptual idea is simple and elegant, the choice of the graph-based DQNs architecture is relevant, the experimental protocols are well-detailed and the experimental results look promising.
+
+
+ROUGE-1: 0.38041, ROUGE-2: 0.08696, ROUGE-L: 0.36911
+
+
+******Generated meta-review by LED*******
+
+This paper proposes a method for learning new branching heuristics in SAT solvers. The idea is very simple: take MiniSat, remove the usual VSIDS heuristic, and replace it with a variable selection policy that has been trained from a deep reinforcement learning algorithm. At each step of an episode the policy selects a variable to branch on and assigns a value to it once the episode terminates. The resulting GQSAT heuristic is endowed with attractive properties: on random SAT instances, it outperforms VSIDS and generalizes relatively well to other SAT distributions. The paper is well-written, well-motivated, and well-positioned with respect to related work. The experimental results look promising. 
+
+ROUGE-1: 0.28448, ROUGE-2: 0.05628, ROUGE-L: 0.27586
+
+
+******Generated meta-review by PegasusX*******
+
+The paper proposes a branching heuristic for SAT solvers. The idea is simple and elegant, and the experimental results are promising. The paper is well written and easy to read. The authors have addressed the concerns raised by the reviewers. The AC agrees with the authors and recommends acceptance.
+
+ROUGE-1: 0.16418, ROUGE-2: 0.04000, ROUGE-L: 0.15920
+
+
+******Generated meta-review by RAMMER*******
+
+There was substantial discussion with reviewers that all agreed on. It was deemed a weak accept by the two reviewers. There were still a few minor, and important concerns that could be resolved. Thus, the AC recommends to accept the paper, but recommends that authors carefully take feedback from all reviewers to develop further and improved the manuscript for a clearer explanation and a strong presentation. 
+
+ROUGE-1: 0.17661, ROUGE-2: 0.01918, ROUGE-L: 0.16706
+
+
+******Sample 33*******
+
+https://openreview.net/forum?id=HyezBa4tPB
+
+******Ground-truth meta-review*******
+
+This paper proposes adding a Dirichlet distribution as a wrapper on top of a black box classifier in order to better capture uncertainty in the predictions.  This paper received four reviews in total with scores (1,1,1,6).  The reviewer who gave the weak accept found the paper well written, easy to follow and intuitive.  The other reviewers, however, were primarily concerned about the empirical evaluation of the method.  They found the baselines too weak and weren't convinced that the method would work well in practice.  The reviewers also cited a lack of comparison to existing literature for their scores.  One reviewer noted that while the method addresses aleatoric uncertainty, it doesn't provide any mechanism for epistemic uncertainty, which would be necessary for the applications motivating the work.  
+
+The authors did not provide a response and thus there was no discussion. 
+
+******Generated meta-review by PRIMERA*******
+
+This paper presents a method for learning a “wrapper” model which endows a multiclass predictor with an estimate of model uncertainty. The base model is treated as a black box which emits a categorical distribution, while the wrapper model estimates the parameters of a Dirichlet distribution. The wrapper is trained against silver labels from the base model, and the sampled predictive entropy is used to threshold predictions so as to withhold a decision on uncertain examples. Based on the resulting uncertainty measure, we advocate for a rejection system that selects the more confident predictions, discarding those more uncertain, leading to an improvement in the trustability of the resulting system. We showcase the proposed technique and methodology in two practical scenarios, one for NLP and another for computer vision, where a simulated API based is applied to different domains. Results demonstrate the effectiveness of the uncertainty computed by the wrapper and its high correlation to wrong predictions and misclassification.
+
+The reviewers agree that the paper addresses an important practical challenge in machine learning, but a confusing problem-framing and lack of robust baselines make me skeptical that it is suitable for publication at ICLR 2020. A primary concern with this work is its framing of the problem as one of measuring aleatoric uncertainty, but the motivation in transfer learning and interdependence in production ML systems requires models that can characterize epistemic (reducible) uncertainty. A black box model that yields distributions over classes expresses aleATORic uncertainty via that distribution, and uncertainty due to a shifted data distribution is epistemic as additional data from the new domain would reduce it. 
+
+ROUGE-1: 0.34063, ROUGE-2: 0.07824, ROUGE-L: 0.31630
+
+
+******Generated meta-review by LED*******
+
+This paper proposes to use a Dirichlet prior over the multinomial distribution outputted by blackbox DL models, to quantify uncertainty in predictions. The paper is well written, and easy to understand. However, the main contribution is not particularly novel and some experimental details (Section 3) are not well-motivated.
+
+ROUGE-1: 0.25907, ROUGE-2: 0.07330, ROUGE-L: 0.25907
+
+
+******Generated meta-review by PegasusX*******
+
+The paper proposes a method for learning a “wrapper” model which endows a multiclass predictor with an estimate of model uncertainty. The base model is treated as a black box which emits a categorical distribution, while the wrapper model estimates the parameters of a Dirichlet distribution. The wrapper is trained against silver labels from the base model, and the sampled predictive entropy is used to threshold predictions so as to withhold a decision on uncertain examples. The paper is well written and easy to understand. However, the main contribution is not particularly novel and some experimental details (Section 3) are not well-motivated. The authors should include more thorough comparisons to the literature, and by a clearer motivation for the training procedure used.
+
+ROUGE-1: 0.39700, ROUGE-2: 0.12075, ROUGE-L: 0.35206
+
+
+******Generated meta-review by RAMMER*******
+
+The paper makes an interesting theoretical and technical contribution to the field of classifier decision-distribution models that should be of interest to the community. However, the reviewers think the model itself is not sufficiently convincing and it is easy to understand what the goal is.  In the paper, all three reviewers agree that the approach is not convincing, or the evaluation is not sufficient.   In particular, they point to several technical issues, such as lack of theoretical support, and lack of experiments, as well as some weak empirical results.  No reviewer recommends accepting the paper.
+
+ROUGE-1: 0.38333, ROUGE-2: 0.05042, ROUGE-L: 0.34167
+
+
+******Sample 34*******
+
+https://openreview.net/forum?id=QDDVxweQJy0
+
+******Ground-truth meta-review*******
+
+Four reviewers acknowledged the author's response and did not change their largely negative scores.  The one enthusiastic reviewer did not respond to the more negative reviewers and has not worked in the theorem proving area. The main problem with the paper seems to be that the reviewers were not convinced by the empirical results.  They felt that results should have been presented on more widely used benchmark datasets.
+
+******Generated meta-review by PRIMERA*******
+
+The paper proposes an incremental learning approach to theorem proving that learns to prove theorems from scratch, using Hindsight Experience Replay (HER) to learn from unsuccessful proofs. The approach adopts ideas from goal-conditioned reinforcement learning and creates more training examples by turning intermediate steps of an unsuccessful proof attempt into proved conjectures and add these into positive examples to learned from. This significantly increases the number of examples to Learn from compared to related work that only learns from successful proofs. 
+
+The reviewers agree that the idea of creating positive examples from failed proofs seems new in theorem proving and, together with HER, shown to significantly improve performance of the learning-based prover. They propose a transformer based representation of logical statements.
+
+However, there are some concerns about the lack of confidence intervals and the choice of the formula representation and the transformer-based architecture associated with it are not properly justified. Also, the use of spectral encoding in this context can be a useful contribution however no experimental results were reported to ablate that.
+
+ROUGE-1: 0.24490, ROUGE-2: 0.03292, ROUGE-L: 0.18776
+
+
+******Generated meta-review by LED*******
+
+This paper proposes an incremental learning approach to theorem proving that learns to prove theorems from scratch, using Hindsight Experience Replay (HER) to learn from unsuccessful proofs. The reviewers agree that the paper is well-written and the idea is novel. However, there are concerns about the novelty of the method and the experimental evaluation. The authors are encouraged to improve the experiments and resubmit to a future venue.
+
+ROUGE-1: 0.28986, ROUGE-2: 0.07353, ROUGE-L: 0.27536
+
+
+******Generated meta-review by PegasusX*******
+
+The paper proposes a method for training domain-specific theorem provers for first-order logic without equality, based on hindsight experience replay. The paper is well-written and the idea is novel. The experiments are convincing. The main concern is the performance of the resulting prover. The authors have provided a rebuttal and have addressed the concerns of the reviewers. However, the paper still does not meet the bar for publication at NeurIPS.
+
+ROUGE-1: 0.28169, ROUGE-2: 0.05714, ROUGE-L: 0.28169
+
+
+******Generated meta-review by RAMMER*******
+
+This paper proposes an incremental proof for the question of whether prover has the optimal input, and shows that it has a better ability than an average to optimize that.
+
+The reviewers had several concerns that the paper should be significantly improved and is not yet ready for acceptance. The paper is not convincing in any of the domains and the reviewers cannot find sufficient support to make an evaluation for the paper. The empirical results in the empirical study is only limited, and some of the baselines are missing. The authors' rebuttal clarified and added the experimental evaluation, but they are missing more clarity and baselines were missing in the experiments. The presentation could be improved in terms of presentation and clarity in terms that indicate the approach is relevant for the real world as compared with other approaches. 
+
+As noted by reviewers, and supported by additional references and the responses provided in the rebuttal, this paper is technically sound.
+
+
+ROUGE-1: 0.30435, ROUGE-2: 0.07895, ROUGE-L: 0.25217
+
+
+******Sample 35*******
+
+https://openreview.net/forum?id=BJeFQ0NtPS
+
+******Ground-truth meta-review*******
+
+The paper proposed a non-autoregressive attention based encoder-decoder model for text-to-sepectrogram using attention distillation. It is shown to bring good speedup to conventional autoregressive ones. The paper further adopted VAE for the vocoder training which trains from scratch although performs worse than existing method (e.g. ClariNet). 
+
+The main concerns for this paper come from the unclear presentation:
+* As the reviewer pointed out, there're some misleading claims that the speedup gains was obtained without the consideration of the full context (i.e. not including the whole inference time).
+* The paper failed to clear present the architectures developed/used in the paper and the differences from those used in the literature. The reviewers suggested the use of diagram to aid the presentation.
+* The two contributions are unbalanced presented. Due to the complexities involved, it's better to explain things in more details. 
+The authors acknowledged the reviewers comments during rebuttal, but did not make any changes to the paper.
+
+******Generated meta-review by PRIMERA*******
+
+This paper proposes a novel feed-forward network based on Transformer to generate mel-spectrogram in parallel for TTS. The first contribution is presented in a completely verbal manner to describe the complex process of text-to-speech mapping. For instance, I cannot find a proper technical description of 1) anywhere in the introduction, only statements that it is non-autoregressive and parallel. The second contribution is squashed into a single page. Due to complexity involved I believe each of these contributions needs to be written (and assessed) separately. For example, on page 6 you have a) encoder, b) decoder, c) VAE objective, d) STFT loss all discussed in very short details. Furthermore, the paper does not seem to make things any clearer with succinct architecture diagrams. Just as a comparison, I would like to draw attention to Tacotron (1, 2) in which I think the details can actually be worked out with some effort.
+
+ROUGE-1: 0.35220, ROUGE-2: 0.06962, ROUGE-L: 0.33333
+
+
+******Generated meta-review by LED*******
+
+The paper proposes a new parallel neural text-to-speech system using parallel neural vocoders, which can synthesize speech from text through a single feed-forward pass. The paper claims speed up of ~50X over DeepVoice 3 which is very significant. However, the presentation of the paper needs to be improved to make it more accessible to the community.
+
+ROUGE-1: 0.24324, ROUGE-2: 0.08182, ROUGE-L: 0.23423
+
+
+******Generated meta-review by PegasusX*******
+
+The paper proposes a novel feed-forward network based on Transformer to generate mel-spectrogram in parallel for TTS. The main idea behind this paper is to remove autoregressive components. The paper is generally a good addition to the TTS literature. However, the presentation of the paper could be improved. The authors have provided a detailed response to the reviews, but the paper still needs a lot of work before it can be published.
+
+ROUGE-1: 0.31224, ROUGE-2: 0.11915, ROUGE-L: 0.30380
+
+
+******Generated meta-review by RAMMER*******
+
+This paper addresses the problem of communicating speech from multiple vocoder architectures in the parallel state of nature via a waveform to a non-speech speech model.  The reviewers agree that the paper is not ready for acceptance in its current form.  However, they appreciate the work being evaluated through state of the art of multiple filters that allows it to tackle the problem.  In this sense, and with the current method as proposed, the contribution is limited.
+
+As the reviewers point out, the proposed approach is relatively incremental, the contributions are small, and the contribution compared to baselines, such as TTS, is not high enough, and is not well evaluated by the reviewers.
+
+ROUGE-1: 0.34657, ROUGE-2: 0.10182, ROUGE-L: 0.33935
+
+
+******Sample 36*******
+
+https://openreview.net/forum?id=6NT1a56mNim
+
+******Ground-truth meta-review*******
+
+This manuscript presents a method to refine high-level task descriptions into mid-level executable steps. The idea of using language models to generate steps for a robot to follow is very interesting. Reviewer concerns focused on the general applicability of the approach and the evaluation.
+
+Reviewers pointed out that the method is tied to VirtualHome which has various properties that are in general not true: the action space is small, the action space is very sparse, and objects tend to be unique.
+
+First, the method enumerates a sentence for every possible action and object combination in the environment. The fact that VirtualHome has few verbs and few objects and that neither of these has complex additional structure (adjectives, adverbs, etc.) means that this is practical. But in any other practical setting this will be impossible. The manuscript mentions this limitation and hints at possible ways to resolve it.
+
+Second, the method requires that the action space must be incredibly sparse. Moreover, a set of common sense rules are needed which are environment specific and must be hand curated. VirtualHome disallows microwaving a cup for example. It also disallows opening the TV. Both of these are valid actions that happen all the time.
+
+Third, the method requires that objects be unique. If multiple plates, vacuum cleaners, lotions, etc. existed and had to be manipulated, e.g., there is no mechanism to refer to any one plate consistently. The model could generate something like "the first plate" but how to actually execute such an action is far from clear.
+
+This third issue is related to the problem of grounding. Normally, grounding means connecting an abstract concept to something concrete in the environment. All of the grounding that is performed here is by virtue of VirtualHome having unique objects in its environments and the actions not requiring multiple instances of the same object. This is not addressing the problem of grounding. Reviewers requested that grounding be removed from the manuscript. This would significantly enhance it, as the model is inherently incapable of grounding as the authors say: "Indeed, one limitation of our approach is that we do not condition on environment state"
+
+Reviewers took issue with details of the evaluation, which are largely a consequence of the choice of VirtualHome. Sometimes this manifested as strange results like models outperforming humans in terms of correctness. As reviewers pointed out, this is worrisome.
+
+Reviewers were also concerned about the title. It implies that language models are zero-shot planners, but this is not the case. They are instead able to decompose actions into mid-level steps. Reviewers suggested that it would be better to focus the title and tone of the manuscript on extracting task/subtask structures from language models.
+
+The idea presented here, that language models can break tasks into subtasks is interesting. But the manuscript goes a step further and discusses embodied agents which to reviewers appeared to be a reach: there is no grounding and in no sense is the output of the language model any different if the agent is embodied. Even the most positive reviewers felt that discussing embodied agents is unhelpful: it would be better to focus on task/subtask structures. And indeed, this would be more general. All of the concerns that reviewers had around the evaluation would be alleviated by focusing on a language task instead. And the effect of a narrow space of actions, constraints on those actions, and multiple objects of the same class, could be evaluated and reported. Even if the authors had to collect such a corpus, given the difficulties they describe in evaluating on VirtualHome, this would be less of a burden. This could be a strong submission in the future.
+
+******Generated meta-review by PRIMERA*******
+
+This paper studies the ability of pre-trained language models to generate plans or action sequences from a text instruction. The in-context learning ability of language models is used where the model is prompted with an example instruction and corresponding action sequence and the query instruction. Since text sequences generated by the language model may not be directly usable in the agent environment, the closest valid text actions are identified using a retrieval approach. Experiments compare performance of different language models on tasks from the VirtualHome benchmark.
+
+All reviewers agree that the paper is well written and easy to follow, and that the proposed approach is novel, interesting, and promising. 
+
+However, there are several concerns raised by the reviewers, including:
+
+1. The paper does not provide sufficient details about the data, the train and test splits, and the challenging aspects of the task.
+2. The evaluation details in the paper revision are somewhat helpful, but I am still not sure I fully understand the interface.
+3. The translation process only requires the set of all available actions in an embodied environment.
+4. To generalize to other environments similar to VirtualHome or domains beyond the household setting, one may simply supply another set of available actions.
+5. The proposed approach should be compared against other baselines.
+6. For instance, a fine-tuning baseline can be considered where themodel translates to plans.
+7. It would be great if the authors can show its generalization toOther environments such as Room2Room and ALFRED.
+
+ROUGE-1: 0.31724, ROUGE-2: 0.07143, ROUGE-L: 0.30575
+
+
+******Generated meta-review by LED*******
+
+This paper studies the ability of pre-trained language models to generate high-level tasks into a sequence of instructions. This is an interesting direction, and the authors have done a good job in their rebuttal. However, there are still some concerns about the evaluation that need to be addressed in the final version of the paper. 
+
+ROUGE-1: 0.11226, ROUGE-2: 0.04444, ROUGE-L: 0.10931
+
+
+******Generated meta-review by PegasusX*******
+
+The paper presents a method for generating action plans from large language models. The paper is well written and the method is simple. However, the evaluation is not convincing enough. The authors have provided a detailed response to the concerns raised by the reviewers. The AC agrees with the authors and recommends acceptance.
+
+ROUGE-1: 0.10996, ROUGE-2: 0.03875, ROUGE-L: 0.10698
+
+
+******Generated meta-review by RAMMER*******
+
+The paper studies high-level-level language modeling (LLMs), and it investigates the significance of the action sequence in an embodied environment. It proposes a method (like that of the authors in previous works) to generate instructions from a text instruction sequence. The reviewers are in agreement about the significance and clarity of this work, and the empirical gains from the proposed model are strong. I therefore recommend acceptance.
+
+ROUGE-1: 0.13062, ROUGE-2: 0.03785, ROUGE-L: 0.13062
+
+
+******Sample 37*******
+
+https://openreview.net/forum?id=BylPSkHKvB
+
+******Ground-truth meta-review*******
+
+The paper proposed a new seq2seq method to implement natural language to formal language translation.  Fixed length Tensor Product Representations are used as the intermediate representation between encoder and decoder.  Experiments are conducted on MathQA and AlgoList datasets and show the effectiveness of the methods.  Intensive discussions happened between the authors and reviewers.  Despite of the various concerns raised by the reviewers, a main problem pointed by both reviewer#3 and reviewer#4 is that there is a gap between the  theory and the implementation in this paper.  The other reviewer (#2) likes the paper but is less confident and tend to agree with the other two reviewers.
+
+******Generated meta-review by PRIMERA*******
+
+This paper proposes a new encoder-decoder based on Tensor Product Representations (TPRs) for Formal-language generation, called TP-2F. The encoder of TP-N2F employs TPR to encode natural-language symbolic structure in vector space and the decoder uses TPR 'unbinding' to generate a TPR decoder to perform TPR generation. The paper is well-written and the experimental results are positive, but in my opinion the exposition could use some substantial work. Fixing the most substantial flaws in the exposition would be sufficient to warrant an accept in my view.
+
+ROUGE-1: 0.36181, ROUGE-2: 0.10152, ROUGE-L: 0.35176
+
+
+******Generated meta-review by LED*******
+
+This paper proposes a sequence-to-sequence model for mapping word sequences to relation-argument-tuple sequences. It uses an encoder-decoder architecture with a fixed-dimensional intermediate representation, and an autoregressive decoder using attention. The idea is interesting and the experimental results are positive, but in my opinion the exposition could use some substantial work. 
+
+ROUGE-1: 0.28049, ROUGE-2: 0.06173, ROUGE-L: 0.25610
+
+
+******Generated meta-review by PegasusX*******
+
+The paper proposes a novel method for learning to generate programs from natural language descriptions. The idea is novel and the experimental results are promising. The paper is well written and easy to follow. The authors have addressed the major concerns raised by the reviewers. The AC recommends acceptance.
+
+ROUGE-1: 0.34395, ROUGE-2: 0.14194, ROUGE-L: 0.33121
+
+
+******Generated meta-review by RAMMER*******
+
+A very convincing, clear, good, well-written paper, well written, easy to follow, on an interesting topic.
+ 
+I suggest the authors take into account all the detailed comments and clarifications from the reviewers and consider the suggestions from the authors to make their paper even stronger.
+
+ROUGE-1: 0.19481, ROUGE-2: 0.02632, ROUGE-L: 0.19481
+
+
+******Sample 38*******
+
+https://openreview.net/forum?id=S1xJ4JHFvS
+
+******Ground-truth meta-review*******
+
+The paper addresses an important problem of finding a good trade-off between generalization and convergence speed of stochastic gradient methods for training deep nets. However, there is a consensus among the reviewers, even after rebuttals provided by the authors, that  the contribution is somewhat limited and the paper may require additional work before it is ready to be published.
+
+******Generated meta-review by PRIMERA*******
+
+This paper proposes a new method to remove the use of the second moment in Adam in order to improve the generalization ability of Adam. 
+
+The reviewers agree that this is an important problem and the proposed method is novel and interesting. However, the paper is meandering and confusing, and it is not clear how it compares against the other methods. The regret analysis follows largely from standard arguments. The presentation and structure of the paper should be improved further, such as adding several subsection in Sec. 3, so that readers could easily follow the main idea of this paper.
+
+ROUGE-1: 0.32500, ROUGE-2: 0.08861, ROUGE-L: 0.30000
+
+
+******Generated meta-review by LED*******
+
+This paper proposes a new method to achieve fast convergence of adaptive SGD and preserve the generalization ability of SGD. The idea is to let the search direction opposite to the gradient at the current batch of examples and a bit orthogonal to previous batch. The algorithm is easy to implement and backed up with regret bounds. Several experimental results are also reported to verify the effectiveness of the algorithm.
+
+The paper is well-written and well-motivated. However, the paper is meandering and confusing. The presentation and structure of the paper should be improved further, such as adding several subsection in Sec. 3 to make readers follow the main idea of this paper more easily.
+
+ROUGE-1: 0.26136, ROUGE-2: 0.02299, ROUGE-L: 0.21591
+
+
+******Generated meta-review by PegasusX*******
+
+The paper proposes a new method for balancing the generalization and convergence speed of stochastic gradient descent. The paper is well written and the results are convincing. However, the paper is not ready for publication at ICLR. The main concerns raised by the reviewers are: - The presentation and structure of the paper should be improved further, such as adding several subsections in Sec. 3, so that readers could easily follow the main idea of this paper. - The regret bound in Theorem 4.2 is not quite satisfactory. - There is no guarantee on the approximation in Equation 5. - It is not clear why removing the second moment is important. - Apriori, it is not clearly why removing second moment was important.
+
+ROUGE-1: 0.34637, ROUGE-2: 0.15819, ROUGE-L: 0.31285
+
+
+******Generated meta-review by RAMMER*******
+
+This paper proposes a method to overcome the concerns of the reviewers. In particular, they agree the authors' formulation of the problem is novel. The theoretical results should be of interest to the research community. The reviewers have raised their scores, in one case the paper was considered as an acceptance. The AC thus recommends acceptance.
+
+ROUGE-1: 0.31034, ROUGE-2: 0.05263, ROUGE-L: 0.25862
+
+
+******Sample 39*******
+
+https://openreview.net/forum?id=rJehNT4YPr
+
+******Ground-truth meta-review*******
+
+This paper proposes a new way of comparing classifiers, which does not use fixed test set and adaptively sample it from an arbitrarily large corpus of unlabeled images, i.e. replacing the conventional test-set-based evaluation methods with a more flexible mechanism. The main proposal is to build a test set adaptively in a manner that captures how classifiers disagree, as measured by the wordnet tree. As noted by R2, this work has the potential to be of interest to a broad audience and can motivate many subsequent works. 
+
+While the reviewers acknowledged the importance of this work, they raised several concerns: (1) the proposed approach is immature to be considered for benchmarking yet (R1,R4), (2) selecting k and studying its influence on the performance ( R1, R3, R4), (3) the proposed approach requires data annotation which might not be straightforward -- (R3, R4).  The authors provided a detailed rebuttal addressing the reviewer concerns.
+
+There is reviewer disagreement on this paper. The comments from R3 were valuable for the discussion, but at the same time too brief to be adequately addressed by the authors. The comments from emergency reviewer were helpful in making the decision. AC decided to recommend acceptance of the paper seeing its valuable contributions towards re-thinking the evaluation of current SOTA models.
+
+
+******Generated meta-review by PRIMERA*******
+
+This paper proposes a new method to compare existing classifiers, which does not use fixed test set and adaptively sample it from an arbitrarily large corpus of unlabeled images. The main idea seems similar to adopting active learning for the test set selection. However, to compare different classifier, the proposed algorithm still needs humans to annotate the selected dataset, which is very expensive compared with traditional methods. Since this paper select the top-k images in D, the annotating for S will be very tedious, however if k is relatively small the method seems very sensitive to selected examples, which will make the comparison not totally convincing. The authors invite five volunteer graduate students to annotating the selected example. So the experiments in this paper is also not convincing. 
+
+The reviewers agree that the proposed MAD competition distinguishes classifiers by finding their respective counterexamples. It is therefore an "error spotting" mechanism, rather than a drop-in replacement of standard test accuracy.
+
+However, the approach to implicitly assume that the classifiers to be compared are already "reasonably accurate"; since if not, both classifiers might be easily falsified by certain trivial examples, making the "disagreed examples" not as meaningful. If that is true, I would suggest the authors to make this hidden assumption clearer in the paper The idea shows clear liaison to the "differential testing" concept in software engineering besides the cited work of perceptual quality assessment. The idea has a cross-disciplinary nature and is fairly interesting to me. I can see the paper to be of interest to a quite broad audience and can motivate many subsequent works. One minor comment: for images in "Case III", the authors considered them "contribute little to performance comparison between the two classifiers" and therefore did not source labels for them. The only additional work is to select a total of mk new images from D for human labeling (see Algorithm 2). However, since the authors adopted an affinity-aware distance, two incorrect predictions can still be compared based on their semantic tree distances to the true class. 
+
+ROUGE-1: 0.44920, ROUGE-2: 0.17531, ROUGE-L: 0.40998
+
+
+******Generated meta-review by LED*******
+
+This paper proposes a new method to compare image classifiers, which does not use fixed test set and adaptively sample it from an arbitrarily large corpus of unlabeled images. The main idea is to build a test set adaptively in a manner that captures how classifiers disagree, as measured by the wordnet tree. This is used to re-rank the classifier, with shifts up to -4.
+
+The reviewers agree that the idea is interesting, but the proposed procedure is a bit unwieldy, it requires having some set of competing classifiers and wordnet classes, and labelling new images for any new classifier added (which may need domain experts). For it to work fairly in practice there'd need to be some sort of evaluation server and annotation effort. The paper’s clarity would definitely benefit from incorporating those responses into the final version.
+
+ROUGE-1: 0.49162, ROUGE-2: 0.26966, ROUGE-L: 0.47486
+
+
+******Generated meta-review by PegasusX*******
+
+The paper proposes a new method to compare existing classifiers, which does not use fixed test set and adaptively sample it from an arbitrarily large corpus of unlabeled images. The main idea seems similar to adopting active learning for the test set selection. One of the main advantage is that it can select a sample set from an arbitrary large unlabeled image. However, to compare different classifiers the proposed algorithm still needs humans to annotate the selected dataset, which is very expensive compared with traditional methods. The idea has a cross-disciplinary nature and is fairly interesting to me. The AC agrees with the reviewers that the paper is a worthwhile contribution.
+
+ROUGE-1: 0.42073, ROUGE-2: 0.18405, ROUGE-L: 0.39024
+
+
+******Generated meta-review by RAMMER*******
+
+The paper presents a method for learning classification from images.
+All the reviewers agreed that this is a useful, well-written work that is novel and of valuable practical interest. As such, the paper will be a significant contribution to researchers studying image classification in large datasets.
+
+ROUGE-1: 0.22814, ROUGE-2: 0.01533, ROUGE-L: 0.22814
+
