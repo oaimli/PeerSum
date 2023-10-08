@@ -54,6 +54,8 @@ The Huggingface dataset is mainly for multi-document summarization. It contains 
 * label, str, (train, val, test)
 ```
 
+You can access the original webpage of the paper via the link https://openreview.net/forum?id= with paper_id. For example, the paper is iclr_2018_Hkbd5xZRb, then the link is [https://openreview.net/forum?id=Hkbd5xZRb](https://openreview.net/forum?id=Hkbd5xZRb).
+
 Up to now, the dataset has in total of 14,993 samples (train/validation/test: 11,995/1,499/1,499) from the following conferences. (You can use paper_id to filter samples in different years and venues.)
 ```
 * NeurIPS: 2021, 2022
