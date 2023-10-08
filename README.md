@@ -2,25 +2,27 @@
 [![dataset](https://img.shields.io/badge/dataset-%20PeerSum-orange)](https://drive.google.com/drive/folders/1SGYvxY1vOZF2MpDn3B-apdWHCIfpN2uB?usp=sharing) [![arXiv](https://img.shields.io/badge/arxiv-2305.01498-lightgrey)](https://arxiv.org/abs/2305.01498)
 
 ### Overview
-Text summarization systems need to recognize internal relationships among source texts and effectively aggregate and process information from them to generate high-quality summaries. It is particularly challenging in multi-document summarization (MDS) due to the complexity of the relationships among (semi-)parallel source documents. However, existing MDS datasets do not provide explicit inter-document relationships among the source documents, and this makes it hard to research inter-document relationship comprehension of abstractive summarization models. To address this, we present PeerSum, a novel dataset for generating meta-reviews of scientific papers. The meta-reviews can be interpreted as abstractive summaries of reviews, multi-turn discussions among reviewers and the paper author, and the paper abstract. These source documents have rich inter-document relationships with an explicit hierarchical conversational structure, cross-references and (occasionally) conflicting information. 
-![image](https://github.com/oaimli/PeerSum/assets/12547070/93a28a56-7100-43ee-baa8-d84f5fca135d)
+Text summarization systems need to recognize internal relationships among source texts and effectively aggregate and process information from them to generate high-quality summaries. It is particularly challenging in multi-document summarization (MDS) due to the complexity of the relationships among (semi-)parallel source documents. However, existing MDS datasets do not provide explicit inter-document relationships among the source documents, and this makes it hard to research inter-document relationship comprehension of abstractive summarization models. To address this, we present PeerSum, a novel dataset for generating meta-reviews of scientific papers. The meta-reviews can be interpreted as abstractive summaries of reviews, multi-turn discussions among reviewers and the paper author, and the paper abstract. These source documents have rich inter-document relationships with an explicit hierarchical conversational structure, cross-references and (occasionally) conflicting information, as shown in Fig. 1. 
+![image](https://github.com/oaimli/PeerSum/assets/12547070/aa23aa8a-5fed-4cd7-a025-852dbeb0bfdc)
 
+PeerSum features a hierarchical conversational structure among the source documents (which includes the reviews, responses and the paper abstract in different threads). PeerSum has several distinct advantages over existing MDS datasets: 
+- We show that the meta-reviews are largely faithful to the corresponding source documents despite being highly abstractive;
+- The source documents have rich inter-document relationships with an explicit conversational structure;
+- The source documents occasionally feature conflicts which the meta-review needs to handle as reviewers may have a disagreement on reviewing a scientific paper, and we explicitly provide indicators of conflict relationships along with the dataset;
+- It has a rich set of metadata, such as review rating/confidence and paper acceptance outcome, the latter of which can be used for assessing the quality of automatically generated meta-reviews.
 
-To introduce the structural inductive bias into pre-trained language models, we introduce \textbf{\mram} (\underline{R}elationship-\underline{a}ware \underline{M}ulti-task \underline{Me}ta-review Generato\underline{r}), a model that uses sparse attention based on the conversational structure and a multi-task training objective that predicts metadata features (e.g., review ratings).
-Our experimental results show that \mram outperforms other strong baseline models in terms of a suite of automatic evaluation metrics. Further analyses, however, reveal that \mram and other models struggle to handle conflicts in source documents of \ps, suggesting meta-review generation is a challenging task and a promising avenue for further research.\footnote{The dataset and code are available at \url{https://github.com/oaimli/PeerSum}}
-
-PeerSum is constructed based on peer reviews in [OpenReview](https://openreview.net/). For more details please refer to our paper. Please feel free to use our dataset with a citation. You can download them from [Google Drive](https://drive.google.com/drive/folders/1SGYvxY1vOZF2MpDn3B-apdWHCIfpN2uB?usp=sharing) or .
+To introduce the structural inductive bias into pre-trained language models, we introduce Rammer (Relationship-aware Multi-task Meta-review Generator), a model that uses sparse attention based on the conversational structure and a multi-task training objective that predicts metadata features (e.g., review ratings). Our experimental results show that our model outperforms other strong baseline models in terms of a suite of automatic evaluation metrics. Further analyses, however, reveal that our model and other models struggle to handle conflicts in source documents of PeerSum, suggesting meta-review generation is a challenging task and a promising avenue for further research.
 
 ## Updates
-* The paper is accepted at Findings of EMNLP 2023 (Soundness: 3, 3, 4; Excitement: 3, 4, 4; Confidence:3, 3, 4), October 8, 2023.
-* More data added for NeurIPS 2022, April 20, 2023. 
-* Crawled more data for ICLR 2022 and NeurIPS 2021, February 20, 2022. 
-* Initialized the dataset of PeerSum, November 12, 2021.
+* The paper is accepted at Findings of EMNLP 2023 (Soundness: 3, 3, 4; Excitement: 3, 4, 4; Confidence:3, 3, 4). October 8, 2023.
+* More data added for NeurIPS 2022. April 20, 2023. 
+* Crawled more data for ICLR 2022 and NeurIPS 2021. February 20, 2022. 
+* Initialized the dataset of PeerSum. November 12, 2021.
 
 ## Dataset details
-Usually, in a multi-document summarization dataset, there are summaries and source documents. In PeerSum, we have different threads of comments started by official reviewers, public readers, or authors themselves as the source documents and the meta-review (with an acceptance outcome) as the ground truth summary. Each sample of this dataset contains a summary, corresponding source documents and also other completementary informtion (e.g., review scores and confidences) for one academic paper. Up to now, the dataset has 14,993 samples (train/validation/test: 11,995/1,499/1,499).
+PeerSum is constructed based on peer reviews crawled from [OpenReview](https://openreview.net/). Usually, in an MDS dataset, there are summaries and source documents. In PeerSum, we have different comments started by official reviewers, public readers, or authors themselves as the source documents and the meta-review (with an acceptance outcome) as the ground truth summary. Each sample of this dataset contains a summary, corresponding source documents and also other completementary informtion (e.g., review ratings and confidences) for one academic paper. For more details please refer to our [paper](https://arxiv.org/abs/2305.01498). Please feel free to use our dataset with a citation. You can download the raw data from [Google Drive](https://drive.google.com/drive/folders/1SGYvxY1vOZF2MpDn3B-apdWHCIfpN2uB?usp=sharing) and cleaned summarization data from [Huggingface](https://huggingface.co/datasets/oaimli/PeerSum).
 
-The dataset is stored in the format of json. There are some other information for scientific peer reviews (e.g., review score for each peer and acceptance for each paper) which could be used not only for summarization but also providing other insights for peer reviewing process. The file named 'peersum_all.json' which contains all data samples in your downloaded folder. For each sample, details are based on following keys with explanation:
+The raw dataset is stored in the format of JSON. There is some other information for scientific peer reviews (e.g., review rating for each peer review and acceptance for each paper) which could be used not only for summarization but also providing other insights for the peer reviewing process. The file, named 'peersum_all.json', contains all data samples in your downloaded folder. For each sample, details are based on the following keys with explanations:
 ```
 * paper_id: str
 * paper_title: str
@@ -34,6 +36,23 @@ The dataset is stored in the format of json. There are some other information fo
 * confidence: 1-5, int
 * rating: 1-10, int
 * writer: str, (author, official_reviewer, public)
+```
+
+The Huggingface dataset is mainly for multi-document summarization. It contains the same number of samples and each sample comprises information with the following keys with explanations:
+```
+* paper_id: str (a link to the raw data)
+* paper_title: str
+* paper_abstract, str
+* paper_acceptance, str
+* meta_review, str
+* reviews, [{review_id, writer, comment, rating, confidence, reply_to}] (all reviews and discussions)
+* label, str, (train, val, test)
+```
+
+Up to now, the dataset has in total of 14,993 samples (train/validation/test: 11,995/1,499/1,499) from the following conferences. (You can use paper_id to filter samples in different years and venues.)
+```
+NeurIPS: 2021, 2022
+ICLR: 2018, 2019, 2020, 2021, 2022
 ```
 
 
@@ -72,12 +91,12 @@ The code will be updated soon.
 
 If you are going to use our dataset in your work, please cite our paper:
 
-[Li et al. 2023] Miao Li, Eduard Hovy, and Jey Han Lau. "Towards Summarizing Multiple Documents with Hierarchical Relationships". arXiv, 2023.
+[Li et al. 2023] Miao Li, Eduard Hovy, and Jey Han Lau. "Summarizing Multiple Documents with Conversational Structure for Meta-review Generation". arXiv, 2023.
 ```
 @inproceedings{peersum_2023,
-  title={Towards Summarizing Multiple Documents with Hierarchical Relationships},
+  title={Summarizing Multiple Documents with Conversational Structure for Meta-review Generation},
   author={Miao Li, Eduard Hovy, and Jey Han Lau},
-  booktitle={Arxiv},
+  booktitle={Findings of EMNLP 2023},
   year={2023}
 }
 ```
