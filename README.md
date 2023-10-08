@@ -2,15 +2,20 @@
 [![dataset](https://img.shields.io/badge/dataset-%20PeerSum-orange)](https://drive.google.com/drive/folders/1SGYvxY1vOZF2MpDn3B-apdWHCIfpN2uB?usp=sharing) [![arXiv](https://img.shields.io/badge/arxiv-2305.01498-lightgrey)](https://arxiv.org/abs/2305.01498)
 
 ### Overview
-To enhance the capabilities of MDS systems we present PeerSum, a novel dataset for generating meta-reviews of scientific papers, where the meta-reviews are highly abstractive and genuine summaries of reviews and corresponding discussions. These source documents have rich inter-document relationships of an explicit hierarchical structure with cross-references and often feature conflicts. As there is a scarcity of research that incorporates hierarchical relationships into MDS systems through attention manipulation on pre-trained language models, we additionally present Rammer (Relationship-aware Multi-task Meta-review Generator), a meta-review generation model that uses sparse attention based on the hierarchical relationships and a multi-task objective that predicts several metadata features in addition to the standard text generation objective. Our experimental results show that PeerSum is a challenging dataset, and Rammer outperforms other strong baseline MDS models under various evaluation metrics. 
+Text summarization systems need to recognize internal relationships among source texts and effectively aggregate and process information from them to generate high-quality summaries. It is particularly challenging in multi-document summarization (MDS) due to the complexity of the relationships among (semi-)parallel source documents. However, existing MDS datasets do not provide explicit inter-document relationships among the source documents, and this makes it hard to research inter-document relationship comprehension of abstractive summarization models. To address this, we present PeerSum, a novel dataset for generating meta-reviews of scientific papers. The meta-reviews can be interpreted as abstractive summaries of reviews, multi-turn discussions among reviewers and the paper author, and the paper abstract. These source documents have rich inter-document relationships with an explicit hierarchical conversational structure, cross-references and (occasionally) conflicting information. 
+![image](https://github.com/oaimli/PeerSum/assets/12547070/93a28a56-7100-43ee-baa8-d84f5fca135d)
 
-PeerSum is constructed based on peer reviews in [OpenReview](https://openreview.net/). More details please refer to our paper. Please feel free to use our dataset with a citation. You can download them from [Google Drive](https://drive.google.com/drive/folders/1SGYvxY1vOZF2MpDn3B-apdWHCIfpN2uB?usp=sharing).
+
+To introduce the structural inductive bias into pre-trained language models, we introduce \textbf{\mram} (\underline{R}elationship-\underline{a}ware \underline{M}ulti-task \underline{Me}ta-review Generato\underline{r}), a model that uses sparse attention based on the conversational structure and a multi-task training objective that predicts metadata features (e.g., review ratings).
+Our experimental results show that \mram outperforms other strong baseline models in terms of a suite of automatic evaluation metrics. Further analyses, however, reveal that \mram and other models struggle to handle conflicts in source documents of \ps, suggesting meta-review generation is a challenging task and a promising avenue for further research.\footnote{The dataset and code are available at \url{https://github.com/oaimli/PeerSum}}
+
+PeerSum is constructed based on peer reviews in [OpenReview](https://openreview.net/). For more details please refer to our paper. Please feel free to use our dataset with a citation. You can download them from [Google Drive](https://drive.google.com/drive/folders/1SGYvxY1vOZF2MpDn3B-apdWHCIfpN2uB?usp=sharing) or .
 
 ## Updates
-* The paper is accepted at Findings of EMNLP 2023, October 8, 2023.
+* The paper is accepted at Findings of EMNLP 2023 (Soundness: 3, 3, 4; Excitement: 3, 4, 4; Confidence:3, 3, 4), October 8, 2023.
 * More data added for NeurIPS 2022, April 20, 2023. 
 * Crawled more data for ICLR 2022 and NeurIPS 2021, February 20, 2022. 
-* Uploaded the first version of PeerSum, November 12, 2021.
+* Initialized the dataset of PeerSum, November 12, 2021.
 
 ## Dataset details
 Usually, in a multi-document summarization dataset, there are summaries and source documents. In PeerSum, we have different threads of comments started by official reviewers, public readers, or authors themselves as the source documents and the meta-review (with an acceptance outcome) as the ground truth summary. Each sample of this dataset contains a summary, corresponding source documents and also other completementary informtion (e.g., review scores and confidences) for one academic paper. Up to now, the dataset has 14,993 samples (train/validation/test: 11,995/1,499/1,499).
@@ -33,7 +38,7 @@ The dataset is stored in the format of json. There are some other information fo
 
 
 ## How to use the data
-To use our original data, you'd better download 'peersum_all.json' from the shared folder and then load dataset with jsonlines.
+To use our raw data, you'd better download 'peersum_all.json' from the shared folder and then load dataset with jsonlines.
 ```python
 import jsonlines
 peersum = []
