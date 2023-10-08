@@ -84,7 +84,6 @@ peersum_test = peersum_all.filter(lambda s: s['label'] == 'test')
 
 
 ## What are in this Repository
-The code will be updated soon.
 ```
 /
 ├── acceptance_prediction/  --> (Code for predicting paper acceptance with generated summaries)
