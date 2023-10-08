@@ -45,19 +45,24 @@ The Huggingface dataset is mainly for multi-document summarization. It contains 
 * paper_abstract, str
 * paper_acceptance, str
 * meta_review, str
-* reviews, [{review_id, writer, comment, rating, confidence, reply_to}] (all reviews and discussions)
+* review_ids, list(str)
+* review_writers, list(str)
+* review_contents, list(str)
+* review_ratings, list(int)
+* review_confidences, list(int)
+* review_reply_tos, list(str)
 * label, str, (train, val, test)
 ```
 
 Up to now, the dataset has in total of 14,993 samples (train/validation/test: 11,995/1,499/1,499) from the following conferences. (You can use paper_id to filter samples in different years and venues.)
 ```
-NeurIPS: 2021, 2022
-ICLR: 2018, 2019, 2020, 2021, 2022
+* NeurIPS: 2021, 2022
+* ICLR: 2018, 2019, 2020, 2021, 2022
 ```
 
 
 ## How to use the data
-To use our raw data, you'd better download 'peersum_all.json' from the shared folder and then load dataset with jsonlines.
+To use our raw data, you'd better download '[peersum_all.json](https://drive.google.com/file/d/1XCF4omItvv-cyUkLhzt-DLDkg2AKga2O/view?usp=drive_link)' from the shared folder and then load the dataset with jsonlines.
 ```python
 import jsonlines
 peersum = []
@@ -66,7 +71,7 @@ with jsonlines.open("peersum_all.json") as reader:
         peersum.append(line)
 ```
 
-If you are only interested in summarization (generating the meta-review automatically in our paper). You could load it directly with the [Dataset](https://huggingface.co/datasets/oaimli/PeerSum) library by Huggingface as follows (some attributes are removed):
+If you are only interested in summarization (generating the meta-review automatically in our paper). You could load [PeerSum](https://huggingface.co/datasets/oaimli/PeerSum) directly with the datasets library by Huggingface as follows:
 ```python
 from datasets import load_dataset
 peersum_all = load_dataset('oaimli/PeerSum', split='all')
@@ -80,13 +85,17 @@ peersum_test = dataset_all.filter(lambda s: s['label'] == 'test')
 The code will be updated soon.
 ```
 /
-├── analysis/               --> (Code for dataset analysis and comparison)
-├── crawling_data/          --> (Code for crawling data from the websites)
-├── dataset/                --> (A foler containing the dataset)
+├── acceptance_prediction/  --> (Code for predicting paper acceptance with generated summaries)
+├── crawling_data/          --> (Code for crawling data from the websites and preparing training datasets, Section 3 in the paper)
+├── dataset/                --> (A folder containing the dataset)
+├── dataset_analysis/       --> (Code for data quality analysis, Section 3 in the paper)
+├── human_annotation/       --> (Annotation results for the dataset quality in Section 3.3 and evaluation of generated results in Section 5.3)
+├── loading_data/           --> (Code for loading dataset into the models)
+├── mtsum_meta/             --> (The model for the Relationship-aware Multi-task Meta-review Generator)   
 ├── other/                  --> (Other information like the data example)
 ├── plot/                   --> (Plot the results)
-├── preparing_data/         --> (Code for data pre-processing)   
-└── README.md               --> (The readme file)
+├── utils/                  --> (Code for automatic evaluation and data pre-processing)   
+└── README.md               --> (This readme file)
 ```
 
 If you are going to use our dataset in your work, please cite our paper:
