@@ -1,0 +1,1 @@
+# use acceptance prediction based on BERT to evaluate the quality of generated summaries of different models
