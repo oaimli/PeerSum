@@ -101,7 +101,7 @@ peersum_test = peersum_all.filter(lambda s: s['label'] == 'test')
 
 If you are going to use our dataset in your work, please cite our paper:
 
-[Li et al. 2023] Miao Li, Eduard Hovy, and Jey Han Lau. "Summarizing Multiple Documents with Conversational Structure for Meta-review Generation". arXiv, 2023.
+[Li et al. 2023] Miao Li, Eduard Hovy, and Jey Han Lau. "Summarizing Multiple Documents with Conversational Structure for Meta-review Generation". Findings of EMNLP, 2023.
 ```
 @inproceedings{peersum_2023,
   title={Summarizing Multiple Documents with Conversational Structure for Meta-review Generation},
