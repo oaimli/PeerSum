@@ -1,5 +1,5 @@
 # Summarizing Multiple Documents with Conversational Structure for Meta-review Generation
-[![dataset](https://img.shields.io/badge/dataset-%20PeerSum-orange)](https://drive.google.com/drive/folders/1SGYvxY1vOZF2MpDn3B-apdWHCIfpN2uB?usp=sharing) [![arXiv](https://img.shields.io/badge/arxiv-2305.01498-lightgrey)](https://arxiv.org/abs/2305.01498)
+[![dataset](https://img.shields.io/badge/dataset-%20PeerSum-orange)](https://huggingface.co/datasets/oaimli/PeerSum) [![arXiv](https://img.shields.io/badge/arxiv-2305.01498-lightgrey)](https://arxiv.org/abs/2305.01498)
 
 ### Overview
 Text summarization systems need to recognize internal relationships among source texts and effectively aggregate and process information from them to generate high-quality summaries. It is particularly challenging in multi-document summarization (MDS) due to the complexity of the relationships among (semi-)parallel source documents. However, existing MDS datasets do not provide explicit inter-document relationships among the source documents, and this makes it hard to research inter-document relationship comprehension of abstractive summarization models. To address this, we present PeerSum, a novel dataset for generating meta-reviews of scientific papers. The meta-reviews can be interpreted as abstractive summaries of reviews, multi-turn discussions among reviewers and the paper author, and the paper abstract. These source documents have rich inter-document relationships with an explicit hierarchical conversational structure, cross-references and (occasionally) conflicting information, as shown in Fig. 1. 
@@ -14,7 +14,7 @@ PeerSum features a hierarchical conversational structure among the source docume
 To introduce the structural inductive bias into pre-trained language models, we introduce Rammer (Relationship-aware Multi-task Meta-review Generator), a model that uses sparse attention based on the conversational structure and a multi-task training objective that predicts metadata features (e.g., review ratings). Our experimental results show that our model outperforms other strong baseline models in terms of a suite of automatic evaluation metrics. Further analyses, however, reveal that our model and other models struggle to handle conflicts in source documents of PeerSum, suggesting meta-review generation is a challenging task and a promising avenue for further research. For more details about the model and experiments, please refer to our paper.
 
 ## Updates
-* The paper is accepted at Findings of EMNLP 2023 (Soundness: 3, 3, 4; Excitement: 3, 4, 4; Confidence:3, 3, 4). October 8, 2023.
+* The paper is accepted at Findings of EMNLP 2023 (Soundness: 3, 3, 4; Excitement: 3, 4, 4). October 8, 2023.
 * More data added for NeurIPS 2022. April 20, 2023. 
 * Crawled more data for ICLR 2022 and NeurIPS 2021. February 20, 2022. 
 * Initialized the dataset of PeerSum. November 12, 2021.
@@ -50,11 +50,13 @@ The Huggingface dataset is mainly for multi-document summarization. It contains 
 * review_contents, list(str)
 * review_ratings, list(int)
 * review_confidences, list(int)
-* review_reply_tos, list(str)
+* review_reply_tos, list(str), which can be used to reproduce the conversational structure of reviews and discussions
 * label, str, (train, val, test)
 ```
 
-Up to now, the dataset has in total of 14,993 samples (train/validation/test: 11,995/1,499/1,499) from the following conferences. (You can use paper_id to filter samples in different years and venues.)
+You can access the original webpage of the paper via the link https://openreview.net/forum?id= with paper_id. For example, the paper is iclr_2018_Hkbd5xZRb, then the link is [https://openreview.net/forum?id=Hkbd5xZRb](https://openreview.net/forum?id=Hkbd5xZRb). Review_ids, review_writers, review_contents, review_ratings, review_confidences, and review_reply_tos are just columns of reviews in peersum_all.json 
+
+Up to now, the dataset has in total of 14,993 samples (train/validation/test: 11,995/1,499/1,499) from the following conferences. (You can use paper_id to filter samples in different years and venues. We will include more data from coming conferences in future.)
 ```
 * NeurIPS: 2021, 2022
 * ICLR: 2018, 2019, 2020, 2021, 2022
@@ -75,14 +77,13 @@ If you are only interested in summarization (generating the meta-review automati
 ```python
 from datasets import load_dataset
 peersum_all = load_dataset('oaimli/PeerSum', split='all')
-peersum_train = dataset_all.filter(lambda s: s['label'] == 'train')
-peersum_val = dataset_all.filter(lambda s: s['label'] == 'val')
-peersum_test = dataset_all.filter(lambda s: s['label'] == 'test')
+peersum_train = peersum_all.filter(lambda s: s['label'] == 'train')
+peersum_val = peersum_all.filter(lambda s: s['label'] == 'val')
+peersum_test = peersum_all.filter(lambda s: s['label'] == 'test')
 ```
 
 
 ## What are in this Repository
-The code will be updated soon.
 ```
 /
 ├── acceptance_prediction/  --> (Code for predicting paper acceptance with generated summaries)
@@ -100,7 +101,7 @@ The code will be updated soon.
 
 If you are going to use our dataset in your work, please cite our paper:
 
-[Li et al. 2023] Miao Li, Eduard Hovy, and Jey Han Lau. "Summarizing Multiple Documents with Conversational Structure for Meta-review Generation". arXiv, 2023.
+[Li et al. 2023] Miao Li, Eduard Hovy, and Jey Han Lau. "Summarizing Multiple Documents with Conversational Structure for Meta-review Generation". Findings of EMNLP, 2023.
 ```
 @inproceedings{peersum_2023,
   title={Summarizing Multiple Documents with Conversational Structure for Meta-review Generation},
