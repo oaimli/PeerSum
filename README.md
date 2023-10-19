@@ -50,7 +50,7 @@ The Huggingface dataset is mainly for multi-document summarization. It contains 
 * review_contents, list(str)
 * review_ratings, list(int)
 * review_confidences, list(int)
-* review_reply_tos, list(str)
+* review_reply_tos, list(str), which can be used to reproduce the conversational structure of reviews and discussions
 * label, str, (train, val, test)
 ```
 
