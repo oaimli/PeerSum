@@ -6,7 +6,7 @@ from urllib.error import HTTPError
 
 base_url = "https://proceedings.neurips.cc"
 year_url= base_url + "/paper/2019"
-output_file_name = "../data/nips_2019.json"
+output_file_name = "data/nips_2019.json"
 
 req=urllib.request.Request(year_url)
 resp=urllib.request.urlopen(req)
@@ -31,10 +31,11 @@ for item in paper_list:
         content = soup.find("div", attrs={'class': 'col'})
 
         hrefs = content.div.find_all("a")
+
         for h in hrefs:
             hcontent = h.get_text()
             # meta-review
-            if hcontent=="MetaReview »":
+            if hcontent=="MetaReview":
                 req = urllib.request.Request(base_url + h["href"])
                 # print(base_url + content.div.find_all("a")[3].get_text())
                 resp = urllib.request.urlopen(req)
@@ -43,17 +44,20 @@ for item in paper_list:
                 paper["meta_review"] = soup.find_all("div")[-1].get_text()
 
             # reviews
-            if hcontent == "Reviews »":
+            if hcontent == "Reviews":
+                reviews = []
                 req = urllib.request.Request(base_url + h["href"])
                 resp = urllib.request.urlopen(req)
                 data = resp.read()
                 soup = BeautifulSoup(data, 'html.parser')
-                paper["reviews"] = []
                 for review in soup.find_all("pre", attrs={"class":"review"}):
-                    paper["reviews"].append(review.find_next().get_text())
+                    reviews.append(review.find_next().get_text())
+                paper["reviews"] = reviews
+                print(reviews)
 
             if hcontent == "Paper":
                 paper["pdf"] = h["href"]
+
 
 
         # abstract

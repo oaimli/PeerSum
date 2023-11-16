@@ -74,7 +74,7 @@ def prepare_peersum_with_disagreements(folder="data"):
         #     print(paper["paper_id"])
 
     print("all samples with disagreements", len(clusters))
-    # with jsonlines.open("../dataset/peersum_with_disagreements.json", "w") as writer:
+    # with jsonlines.open("../../datasets/peersum_with_disagreements.json", "w") as writer:
     #     writer.write_all(clusters)
 
 
@@ -83,7 +83,7 @@ def prepare_peersum():
     transform peersum into the format for multi-document summarization
     """
     samples = loading_peersum(including_public=True, including_author=True, including_abstract=True)
-    with jsonlines.open("../dataset/peersum.json", "w") as writer:
+    with jsonlines.open("../../datasets/peersum.json", "w") as writer:
         writer.write_all(samples)
 
 

@@ -5,7 +5,7 @@ import os
 
 base_url = "https://proceedings.neurips.cc"
 year_url= base_url + "/paper/2020"
-output_file_name = "../data/nips_2020.json"
+output_file_name = "data/nips_2020.json"
 
 req=urllib.request.Request(year_url)
 resp=urllib.request.urlopen(req)
@@ -39,7 +39,7 @@ for item in paper_list[len(exist_papers):]:
         hcontent = h.get_text()
 
         # meta-review
-        if hcontent == "MetaReview »":
+        if hcontent == "MetaReview":
             req = urllib.request.Request(base_url + h["href"])
             # print(base_url + content.div.find_all("a")[3].get_text())
             resp = urllib.request.urlopen(req)
@@ -48,12 +48,12 @@ for item in paper_list[len(exist_papers):]:
             paper["meta_review"] = soup.p.get_text()
 
         # reviews
-        if hcontent == "Review »":
+        if hcontent == "Review":
             req = urllib.request.Request(base_url + h["href"])
             resp = urllib.request.urlopen(req)
             data = resp.read()
             soup = BeautifulSoup(data, 'html.parser')
-            paper["reviews"] = []
+            reviews = []
             for tmp in soup.find_all("h3")[1:]:
                 review = {}
                 sc = tmp.find_next("p")
@@ -72,13 +72,15 @@ for item in paper_list[len(exist_papers):]:
                 review["reproducibility"] = re.get_text()
                 af = re.find_next("p")
                 review["additional_feedback"] = af.get_text()
-                paper["reviews"].append(review)
+                reviews.append(review)
+            paper["reviews"] = reviews
+            print(len(reviews))
 
-        if hcontent == "Paper »":
+        if hcontent == "Paper":
             paper["pdf"] = h["href"]
 
         # author response
-        if hcontent == "AuthorFeedback »":
+        if hcontent == "AuthorFeedback":
             author_responses = {}
             author_responses["pdf"] = h["href"]
             paper["author_responses"] = author_responses
