@@ -15,7 +15,7 @@ PeerSum features a hierarchical conversational structure among the source docume
 To introduce the structural inductive bias into pre-trained language models, we introduce Rammer (Relationship-aware Multi-task Meta-review Generator), a model that uses sparse attention based on the conversational structure and a multi-task training objective that predicts metadata features (e.g., review ratings). Our experimental results show that our model outperforms other strong baseline models in terms of a suite of automatic evaluation metrics. Further analyses, however, reveal that our model and other models struggle to handle conflicts in source documents of PeerSum, suggesting meta-review generation is a challenging task and a promising avenue for further research. For more details about the model and experiments, please refer to our paper.
 
 ## Updates
-* The paper is accepted at Findings of EMNLP 2023 (Soundness: 3, 3, 4; Excitement: 3, 4, 4). October 8, 2023.
+* The paper is accepted at Findings of EMNLP 2023 (Soundness: 3/5, 3/5, 4/5; Excitement: 3/5, 4/5, 4/5). October 8, 2023.
 * More data added for NeurIPS 2022. April 20, 2023. 
 * Crawled more data for ICLR 2022 and NeurIPS 2021. February 20, 2022. 
 * Initialized the dataset of PeerSum. November 12, 2021.
